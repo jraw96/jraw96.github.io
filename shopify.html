@@ -49,16 +49,22 @@
 
 	</div><!-- /container -->
 	
+
 	<!-- Shopify Application - Task #1 -->
-	<h2>&nbsp Shopify Task #1: Calculating Expenses </h2>
-	<p>&nbsp Paste a new shopify order file in the text below, or click Load Original to open the file from Task #1 </p>
+	<div id="ww" class="container" align="middle">
+	<script src="script.js"></script>
 	
+	<h2>Shopify Task #1: Calculating Expenses </h2>
+	<p> Load a file from your computer or hit 'Use Provided' to load the order from the Shopify Application</p>
 	
+	<button type="button" onclick="loadOrder()" > Use Provided </button>
 	
-	
-	
-	
-	
+	<p>Select a text file</p>
+	<input type="file" id="fileInput" style="display:inline-block">
+		
+	<span id="fileDisplayArea"></span>
+		
+	</div>
 	
 	
 	<!-- +++++ Footer Section +++++ -->
