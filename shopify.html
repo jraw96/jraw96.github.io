@@ -51,21 +51,51 @@
 	
 
 	<!-- Shopify Application - Task #1 -->
-	<div id="ww" class="container" align="middle">
+	<div id="main" class="container" align="left" class="col-lg-8">
 	<script src="script.js"></script>
 	
 	<h2>Shopify Task #1: Calculating Expenses </h2>
-	<p> Load a file from your computer or hit 'Use Provided' to load the order from the Shopify Application</p>
+	<h4><b>Step 1:</b> Load a Shopify Order file from your computer.</h4> <p> The 2017 Shopify Intern Order can be found <a href="https://shopicruit.myshopify.com/admin/orders.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6">here.</a>
+	<br>To download as a text file click<a href="order.txt" download> here. </a></p>
+	<span id="localOrder"></span>
 	
-	<button type="button" onclick="loadOrder()" > Use Provided </button>
+	<input type="file" id="fileInput" align="middle"><br> <!-- Select file from local computer -->
 	
-	<p>Select a text file</p>
-	<input type="file" id="fileInput" style="display:inline-block">
+	<span id="step2" align = "left"></span> <!-- Step 2 details -->
+	<span id="solve" align="middle"></span><br><br> <!-- Solve button goes here -->
+	<span id="dataTitle" align="middle"></span>	<!-- The title: Data goes here, appears here -->
+	<span id="fileDisplayArea" align="middle"></span><!-- contents of selected text file appear here -->
+	
+	<div id = "answer" align="middle"  style="display:none;" class="answer_list">
+		<h1><p> Data Statistics </p></h1>
 		
-	<span id="fileDisplayArea"></span>
-		
+			<div id="items" class="col-lg-3" style="display:inline-block;">
+			<p> Number of item prices found: </p>
+				<span id="itemTotal" ></span>
+			</div>
+			
+			<div id="taxable" class="col-lg-3" style="display:inline-block;">
+			<p> Number of taxable items found: </p>
+				<span id="taxableTotal" ></span>
+			</div>
+			
+			
+			<div id="total"  class="col-lg-3" style="display:inline-block;">
+			<p> Total Sales of all items </p>
+			<br>
+				<span id="salesTotal" ></span>
+			</div>
+			
+			<div id="totalRevenue"  class="col-lg-3" style="display:inline-block;">
+			<p> With no observable expenses,<br> Total Order Revenue: </p>
+			<br>
+				<span id="revenueTotal" ></span>
+			</div>
+	
 	</div>
-	
+		
+
+	</div>
 	
 	<!-- +++++ Footer Section +++++ -->
 	<div id="footer">

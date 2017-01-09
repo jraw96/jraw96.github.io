@@ -1,7 +1,4 @@
 /*
- * Author: Carlos Alvarez
- * URL: http://alvarez.is
- *
  * Project Name: STANLEY - Free Bootstrap 3 Theme
  * Version: 1.0
  * URL: http://blacktie.co
@@ -139,8 +136,83 @@ a:after {
 	padding-bottom: 50px;
 }
 
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
 
 /* +++++ WRAP SECTIONS +++++ */
+
+#main {
+	padding-top: 70px; /*Change picture padding here */
+	padding-bottom: 70px;
+	word-wrap: break-word;
+	background-color: #f2f2f2;
+}
+
+#answer p {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+#salesTotal p {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 
 #ww {
 	padding-top: 70px; /*Change picture padding here */
@@ -148,10 +220,30 @@ a:after {
 	background-color: #f2f2f2;
 }
 
+#totalRevenue{
+	background-color: #90EE90;
+
+	border: none;
+    color: white;
+	border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;	
+}
+
+#revenueTotal{
+	font-size: 30px;
+	
+}
+
+
 #texts {
 	background-color: #FDF3E7;
 	border-radius: 25px;
 }
+
 
 
 #footer {
@@ -212,8 +304,6 @@ bt {
 	font-size: 12px;
 }
 
-/* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
-/* Effects also are controled by hover.zoom.js */
 .zoom { 
     display:block; 
     position:relative; 
