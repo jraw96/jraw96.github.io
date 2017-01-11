@@ -56,8 +56,8 @@
 	
 	<h2>Shopify Task #1: Calculating Expenses </h2>
 	<h4><b>Step 1:</b> Load a Shopify Order file from your computer.</h4> <p> The 2017 Shopify Intern Order can be found <a href="https://shopicruit.myshopify.com/admin/orders.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6">here.</a>
-	<br>To download as a text file click<a href="order.txt" download> here. </a><br>
-	Open the file from your computer:</p>
+	<br>To download the order as a text file, click<a href="order.txt" download> here. </a><br>
+	To parse the Shopify Order, open the file from your computer: </p>
 	<span id="localOrder"></span>
 	
 	<input type="file" id="fileInput" ><br> <!-- Select file from local computer -->
@@ -72,6 +72,11 @@
 		<div style="display:block">
 		<h1><p> Data Statistics </p></h1>
 		</div>
+		
+			<div id="ordersBlock" class="col-lg-2" style="display:inline-block;">
+			<p> Number of orders:</p>
+				<span id="ordersTotal" ></span>
+			</div>
 			
 			<div id="taxable" class="col-lg-2" style="display:inline-block;">
 			<p> Total USD price: </p>
@@ -80,7 +85,7 @@
 			
 			
 			<div id="total"  class="col-lg-2" style="display:inline-block;">
-			<p> Sub total Cad price: </p>
+			<p> Total subtotal CAD price: </p>
 				<span id="cadSubTotal" ></span>
 			</div>
 			
