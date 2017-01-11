@@ -56,40 +56,49 @@
 	
 	<h2>Shopify Task #1: Calculating Expenses </h2>
 	<h4><b>Step 1:</b> Load a Shopify Order file from your computer.</h4> <p> The 2017 Shopify Intern Order can be found <a href="https://shopicruit.myshopify.com/admin/orders.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6">here.</a>
-	<br>To download as a text file click<a href="order.txt" download> here. </a></p>
+	<br>To download as a text file click<a href="order.txt" download> here. </a><br>
+	Open the file from your computer:</p>
 	<span id="localOrder"></span>
 	
-	<input type="file" id="fileInput" align="middle"><br> <!-- Select file from local computer -->
+	<input type="file" id="fileInput" ><br> <!-- Select file from local computer -->
 	
-	<span id="step2" align = "left"></span> <!-- Step 2 details -->
-	<span id="solve" align="middle"></span><br><br> <!-- Solve button goes here -->
-	<span id="dataTitle" align="middle"></span>	<!-- The title: Data goes here, appears here -->
-	<span id="fileDisplayArea" align="middle"></span><!-- contents of selected text file appear here -->
+	<span id="step2" ></span> <!-- Step 2 details -->
+	<span id="solve" ></span><br><br> <!-- Solve button goes here -->
+	<span id="dataTitle" ></span>	<!-- The title: Data goes here, appears here -->
+	<span id="fileDisplayArea" ></span><!-- contents of selected text file appear here -->
 	
-	<div id = "answer" align="middle"  style="display:none;" class="answer_list">
+	<div id = "answer" align="middle"  style="display:none;" class="answer_list"> <!-- Fade data statistcs -->
+	
+		<div style="display:block">
 		<h1><p> Data Statistics </p></h1>
-		
-			<div id="items" class="col-lg-3" style="display:inline-block;">
-			<p> Number of item prices found: </p>
-				<span id="itemTotal" ></span>
-			</div>
+		</div>
 			
-			<div id="taxable" class="col-lg-3" style="display:inline-block;">
-			<p> Number of taxable items found: </p>
-				<span id="taxableTotal" ></span>
+			<div id="taxable" class="col-lg-2" style="display:inline-block;">
+			<p> Total USD price: </p>
+				<span id="usdTotal" ></span>
 			</div>
 			
 			
-			<div id="total"  class="col-lg-3" style="display:inline-block;">
-			<p> Total Sales of all items </p>
+			<div id="total"  class="col-lg-2" style="display:inline-block;">
+			<p> Sub total Cad price: </p>
+				<span id="cadSubTotal" ></span>
+			</div>
+			
+			<div id="items" class="col-lg-2" style="display:inline-block;">
+			<p> Total taxes included: </p>
+				<span id="tax" ></span>
+			</div>
+			
+			<div id="discountSection" class="col-lg-2" style="display:inline-block;">
+			<p> Total discounts: </p>
+				<span id="discount" ></span>
+			</div>
+			
+			
+			<div id="totalRevenue"  class="col-lg-2" style="display:inline-block;">
+			<p> Total CAD order revenue: </p>
 			<br>
-				<span id="salesTotal" ></span>
-			</div>
-			
-			<div id="totalRevenue"  class="col-lg-3" style="display:inline-block;">
-			<p> With no observable expenses,<br> Total Order Revenue: </p>
-			<br>
-				<span id="revenueTotal" ></span>
+				<span id="cadTotal" ></span>
 			</div>
 	
 	</div>

@@ -8,20 +8,8 @@ window.onload = function() {
 		displayTextFile(fileInput,fileDisplayArea);
 }
 
-// Get preloaded Shopify order
-function useProvided(){
-	
-	var fileDisplayArea = document.getElementById('fileDisplayArea');
-	
-	var fs = require("fs");
-	var text = fs.readFileSync("./order.txt");
-	var textByLine = text.split("\n")
-	
-	
-	displayTextFile(textByLine, fileDisplayArea);
-	
-}
 
+//Display contents of selected file inside text box
 function displayTextFile(fileInput, fileDisplayArea){
 	
 		fileInput.addEventListener('change', function(e) {
@@ -40,7 +28,7 @@ function displayTextFile(fileInput, fileDisplayArea){
 				reader.readAsText(file);	
 				
 				
-				document.getElementById("solve").innerHTML = '<button class = "button" button onclick="calculate()"> Count hard earned money</button>'; 
+				document.getElementById("solve").innerHTML = '<button class = "button" button onclick="call()"> Count hard earned money</button>'; 
 				document.getElementById("dataTitle").innerHTML = '<h3> Selected file contents:</h3>';
 				document.getElementById("step2").innerHTML = '<p><b> Step 2:</b> Click the green button below to search the text file and calculate total order revenue </p>';
 				
@@ -51,8 +39,49 @@ function displayTextFile(fileInput, fileDisplayArea){
 		});
 }
 
-function calculate(){
-	//Clear text fields
+//Pass the search terms that will be looked for in the Shopify Order forms
+function call(){
+	//Temporary value array that will hold all the searched for words.
+	var tokenArray = [];
+	
+	
+	//Values to be displayed on the UI.
+	//To optimize the process below, a loop can definitely be implemented. For now since there are only a few statistics, entering them manually is okay.
+	var totalCadPrice;
+	var totalUsdPrice;
+	var cadSubTotal;
+	var taxTotal;
+	var discountTotal;
+	
+	tokenArray = find("total_price");
+	totalCadPrice = getTotal(tokenArray);
+	
+	tokenArray = find("total_price_usd");
+	totalUsdPrice = getTotal(tokenArray);
+	
+	tokenArray = find("subtotal_price");
+	cadSubTotal = getTotal(tokenArray);
+	
+	tokenArray = find("tax");
+	taxTotal = getTotal(tokenArray);
+	
+	tokenArray = find("total_discount");
+	discountTotal = getTotal(tokenArray);
+
+	//Insert data into respective divs in the shopify.html file
+	document.getElementById("cadTotal").innerHTML = "$" + totalCadPrice;
+	document.getElementById("usdTotal").innerHTML = "$" + totalUsdPrice;
+	document.getElementById("cadSubTotal").innerHTML = "$" + cadSubTotal;
+	document.getElementById("tax").innerHTML = "$" + taxTotal;
+	document.getElementById("discount").innerHTML = "$" + discountTotal;
+	
+	//Reveal data in fade-in effect
+	document.getElementById("answer").style.display = "block";
+}
+
+
+function find(term){
+	
 	document.getElementById("fileDisplayArea").innerHTML = "";
 	document.getElementById("dataTitle").innerHTML = "";
 	
@@ -63,7 +92,6 @@ function calculate(){
 	//The string size of the order is held in this variable, size
 	var size;
 	size = temp.length;
-
 	
 	//Algorithm variables
 	var priceList = []; // Char array; will store up to 5 characters in a row from the shopify order string
@@ -73,55 +101,37 @@ function calculate(){
 	var tempSize; // int; represents the size of priceList, and should remain at 5 for each iteration checking to see if it is equal to 'price'
 	var i2; // Size of shopify order list
 	
+	
+	
+	
+	var termSize = term.length; // Get the size of the word to be searched
+	console.log("termSize: " + termSize);
+	
 	var taxable = []; //string array;
 	var taxSize = 0;
 	var taxWord = "";
 	var taxBool = "";
 	var taxList = [];
 	
-	for(i = 0; i < size - 1; i++){ // Go through every character in the string, looking for each keyword 'price'
+	for(i = 0; i < size; i++){ // Go through every character in the string, looking for each keyword 'price'
 		priceList.push(temp[i]); //Every time 5 characters are in a row, check if they are equal to the word 'price'
-		tempsize = priceList.length;		
+		tempSize = priceList.length;		
 		i2 = i;
 		//Every check every sequence of 5 letter words, to check if they equal price.
-		if(tempsize == 5){
-			for(k = 0; k < 5; k++){
+		
+		if(tempSize == termSize){
+			for(k = 0; k < termSize; k++){
 				checkWord = checkWord + priceList[k]; // The 5 chars are now a string in checkWord
 			}
 			
 			// If the checkWord is equal to price, save the char numbers associated with that product
-			if(checkWord == "price"){ 
-				if(temp[i2 + 3] != 'n'){
+			if(checkWord == term){ 
+				if((temp[i2 + 3] == '"') && (temp[i2 - termSize] == '"')){
 					var z = 4; //The value of price is 4 characters offset from the word 'price'
 					//Once the word price has been located, search further in the string until the price value is found
 					while(temp[i2 + z] != '"'){
 						priceString = priceString + temp[i2 + z];
-						var sum = i2 + z;
-						z++;
-					}
-					
-					//Once the word price has been found, check further in the string to see if it is taxable:
-					var loopKeeper = 1;
-					while(loopKeeper == 1){
-						taxable.push(temp[i2 + z]);
-						taxSize = taxable.length;
 						
-						if(taxSize == 7){
-							for(q = 0; q < taxSize; q++){
-								taxWord = taxWord + taxable[q];
-							}
-							if(taxWord == "taxable"){
-								while(temp[i2 + z + 3] != ','){
-									taxBool = taxBool + temp[i2 + z + 3];
-									z++;
-								}
-								taxList.push(taxBool);
-								loopKeeper++;
-							}
-							taxWord = "";
-							taxBool = "";
-							taxable.shift();
-						}					
 						z++;
 					}
 					finalList.push(priceString); // Save the price of a product, which is now a string
@@ -132,45 +142,35 @@ function calculate(){
 			priceList.shift(); // Remove the last char, to make the size of the priceList char array 4. This way it will be 5 next push. 
 		}
 	}
+
+	return finalList; //return the array to the function called
 	
+}
+
+
+function getTotal(list){
 	
+	var size;
+	size = list.length;
+	var temp;
+	var total = 0;
+	console.log("Elements inside array: " + list.length);
 	
-	//Display variables
-	var grand = 0; // float; Will hold the total sum of all found prices
-	var convert = 0; // float; holds a temporary value of a string converted to a float
-	
-	for(i = 0; i < finalList.length; i++){
-		console.log("Price found: " + finalList[i]);
-		convert = parseFloat(finalList[i]);
-		grand = grand + convert;
+	for(i = 0; i <= size - 1; i++){
+		console.log("Price found: " + list[i]);
+		temp = parseFloat(list[i]);
+		total = total + temp;
+		console.log("Added " + temp + " to total");
+		console.log("Current total: " + total);
 	}
+	console.log("Price total: " + total);
 	
-	total = grand;
-	priceSize = finalList.length;
+	total = Math.round(total * 100) / 100
 	
-	console.log("Total items: " + finalList.length);
-	console.log("Money total: $" + grand);
-	console.log("Taxables found: " + taxList.length);
-	
-	var taxes;
-	taxes = taxList.length;
-	
-	//Activate the fields in the UI with information from the javascript
-	displayStats(grand, priceSize, taxes);
-	
-	
+	return total;
 }
 
-function displayStats(grand, priceSize, taxes){
-	
-	
-	document.getElementById("salesTotal").innerHTML = "$" + grand;
-	document.getElementById("itemTotal").innerHTML = priceSize;
-	document.getElementById("taxableTotal").innerHTML = taxes;
-	document.getElementById("revenueTotal").innerHTML = "$" + grand;
-	document.getElementById("answer").style.display = "block";
 
-}
 
 
 
