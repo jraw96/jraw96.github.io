@@ -82,7 +82,7 @@ function call(){
 	document.getElementById("cadSubTotal").innerHTML = "$" + cadSubTotal;
 	document.getElementById("tax").innerHTML = "$" + taxTotal;
 	document.getElementById("discount").innerHTML = "$" + discountTotal;
-	document.getElementById("ordersTotal").innerHTML = + numberOfOrders;
+	document.getElementById("ordersTotal").innerHTML = numberOfOrders;
 	
 	//Reveal data in fade-in effect
 	document.getElementById("answer").style.display = "block";
