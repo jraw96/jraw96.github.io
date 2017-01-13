@@ -1,5 +1,9 @@
 var source;
 var total;
+
+
+// ++++ UI Components +++++ 
+
 //Get text file that user uploads
 window.onload = function() {
 		var fileInput = document.getElementById('fileInput');
@@ -27,7 +31,7 @@ function displayTextFile(fileInput, fileDisplayArea){
 
 				reader.readAsText(file);	
 				
-				
+				//One the text file is loaded, present the option to parse the file.
 				document.getElementById("solve").innerHTML = '<button class = "button" button onclick="call()"> Count hard earned money</button>'; 
 				document.getElementById("dataTitle").innerHTML = '<h3> Selected file contents:</h3>';
 				document.getElementById("step2").innerHTML = '<p><b> Step 2:</b> Click the green button below to search the text file and calculate total order revenue </p>';
@@ -38,6 +42,9 @@ function displayTextFile(fileInput, fileDisplayArea){
 			}	
 		});
 }
+
+
+// ++++ Parsing Algorithm ++++ 
 
 //Pass the search terms that will be looked for in the Shopify Order forms
 function call(){
@@ -89,7 +96,7 @@ function call(){
 }
 
 
-function find(term, code){
+function find(term, sel){
 
 	
 	document.getElementById("fileDisplayArea").innerHTML = "";
@@ -104,83 +111,75 @@ function find(term, code){
 	size = temp.length;
 	
 	//Algorithm variables
-	var priceList = []; // Char array; will store up to 5 characters in a row from the shopify order string
-	var checkWord = ""; // string; will convert priceList into a string
-	var priceString = ""; // string; holds the string value of a found price
+	var wordList = []; // Char array; will store up to 5 characters in a row from the shopify order string
+	var checkWord = ""; // string; will convert wordList into a string
+	var wordString = ""; // string; holds the string value of a found price
 	var finalList = []; // string array; will store all found prices
-	var tempSize; // int; represents the size of priceList, and should remain at 5 for each iteration checking to see if it is equal to 'price'
-	var i2; // Size of shopify order list
+	var tempSize; // int; represents the size of wordList, and should remain at 5 for each iteration checking to see if it is equal to 'price'
 	
 
 	var termSize = term.length; // Get the size of the word to be searched
 	
-	for(i = 0; i < size; i++){ // Go through every character in the string, looking for each keyword 'price'
-		priceList.push(temp[i]); //Every time 5 characters are in a row, check if they are equal to the word 'price'
-		tempSize = priceList.length;		
-		i2 = i;
-		//Every check every sequence of 5 letter words, to check if they equal price.
-		
-		if(tempSize == termSize){
+	for(i = 0; i < size; i++){ // Check every character in the entire Shopify order.
+		wordList.push(temp[i]); //Every there are N characters in a row equal to the size of the passed term, check if they are the passed term.
+		tempSize = wordList.length;		
+	
+		if(tempSize == termSize){ // Convert the list of char into a string.
 			for(k = 0; k < termSize; k++){
-				checkWord = checkWord + priceList[k]; // The 5 chars are now a string in checkWord
+				checkWord = checkWord + wordList[k]; // The 5 chars are now a string in checkWord
 			}
 			
-			// If the checkWord is equal to price, save the char numbers associated with that product
+			// If the checkWord is equal to the searched word, extract the value associated with that word.
 			if(checkWord == term){ 
 			
-			if(code == "1"){
-				if((temp[i2 + 3] == '"') && (temp[i2 - termSize] == '"')){
-					var z = 4; //The value of price is 4 characters offset from the word 'price'
-					//Once the word price has been located, search further in the string until the price value is found
-					while(temp[i2 + z] != '"'){
-						priceString = priceString + temp[i2 + z];
-						
+			if(sel == "1"){
+				if((temp[i + 3] == '"') && (temp[i - termSize] == '"')){
+					var z = 4; //String values are offset 4 characters from the key value.
+					while(temp[i + z] != '"'){
+						wordString = wordString + temp[i + z];
 						z++;
 					}
-					finalList.push(priceString); // Save the price of a product, which is now a string
-					priceString = ""; // Clear the priceString variable, so it can hold a new price next iteration
+					finalList.push(wordString); // Save the value from the key-value pair into a new array. This array will collect all values.
+					wordString = ""; // Clear the wordString variable, so it can hold a string next iteration
 				}
 			}
 			
 			
-			 if(code == "2"){
-				if((temp[i2 + 3] == '"') && (temp[i2 - termSize] == '"')){
-					var z = 3; //The value of price is 4 characters offset from the word 'price'
-					//Once the word price has been located, search further in the string until the price value is found
-					while(temp[i2 + z] != ','){
-						priceString = priceString + temp[i2 + z];
+			//Save a value that is not a string; ie. a number or boolean.
+			 if(sel == "2"){
+				if((temp[i + 3] == '"') && (temp[i - termSize] == '"')){
+					var z = 3; //Value's that aren't strings are offset by 3 characters.
+					while(temp[i + z] != ','){
+						wordString = wordString + temp[i + z];
 						
 						z++;
 					}
-					finalList.push(priceString); // Save the price of a product, which is now a string
-					priceString = ""; // Clear the priceString variable, so it can hold a new price next iteration
+					finalList.push(wordString); // Save the price of a product, which is now a string
+					wordString = ""; // Clear the wordString variable, so it can hold a new price next iteration
 					}	
 				}
 			}		
-			
-			
 			checkWord = ""; // Clear the checkWord 			
-			priceList.shift(); // Remove the last char, to make the size of the priceList char array 4. This way it will be 5 next push. 
+			wordList.shift(); // Remove the last char, to make the size of the wordList char array 4. This way it will be 5 next push. 
 		}
 	}
 
-	return finalList; //return the array to the function called
+	return finalList; //return the array so that it can be analyzed accordingly.
 	
-	}
+}
 
 
 
+//This function takes an array and selection bit. It returns the total sum or number of elements in the array.
 function getTotal(list, sel){
 
-	
 	var size;
 	size = list.length;
 	var temp;
 	var total = 0;
 	
+	// Return sum
 	if (sel == "1"){
-
-
 	for(i = 0; i <= size - 1; i++){
 		console.log("Price found: " + list[i]);
 		temp = parseFloat(list[i]);
@@ -194,6 +193,7 @@ function getTotal(list, sel){
 	}
 	
 	
+	// Return the number of elements
 	if (sel == "2"){
 		return list.length;
 	}
