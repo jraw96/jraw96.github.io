@@ -1,5 +1,5 @@
 var source;
-var total;
+
 
 
 // ++++ UI Components +++++ 
