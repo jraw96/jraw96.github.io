@@ -370,7 +370,7 @@ $(document).ready(function(){
     $('#load').on("click",function()  {
 		
 		document.getElementById("descriptionHeading").innerHTML = '<h1> Description: Load </h1>'
-		document.getElementById("description").innerHTML = '<p> Delete everything on the canvas, the paste in the save state. </p>'
+		document.getElementById("description").innerHTML = '<p> Delete everything on the canvas, then paste in what was most recently saved </p>'
         //get data from local storage and parse it
         var savedData = localStorage.getItem("save");
         var jsonFile = JSON.parse(savedData);
