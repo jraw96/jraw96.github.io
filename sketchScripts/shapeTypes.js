@@ -45,12 +45,7 @@ function myFreeForm(colour, initialSpotInCanvas ) {
     this.posArray.push(initialSpotInCanvas );
 }
 
-function myGroup(shape1, shape2) {
-    this.type = "group";
-    this.shapeArray = [];
-    this.shapeArray.push(shape1);
-    this.shapeArray.push(shape2);
-}
+
 
 //Prototype object declarations declarations
 myCircle.prototype = Object.create(template.prototype);
@@ -59,7 +54,6 @@ myLine.prototype = Object.create(template.prototype);
 myEllipse.prototype = Object.create(template.prototype);
 myRectangle.prototype = Object.create(template.prototype);
 myFreeForm.prototype = Object.create(template.prototype);
-myGroup.prototype = Object.create(template.prototype);
 
 
 // Object initializtion
@@ -69,7 +63,7 @@ myLine.prototype.constructor = myLine;
 myEllipse.prototype.constructor = myEllipse;
 myRectangle.prototype.constructor = myRectangle;
 myFreeForm.prototype.constructor = myFreeForm;
-myGroup.prototype.constructor = myGroup;
+
 
 
 
@@ -143,10 +137,6 @@ myFreeForm.prototype.draw = function(cursor) {
     }
 };
 
-myGroup.prototype.draw = function(cursor) {
-    this.shapeArray[0].draw(cursor);
-    this.shapeArray[1].draw(cursor);
-};
 
 
 // Scan functions for each object in canvas ---------------------------------------------
@@ -234,13 +224,6 @@ myFreeForm.prototype.scan = function(cursorPos) {
     return false;
 }
 
-myGroup.prototype.scan = function(cursorPos) {
-    if ((this.shapeArray[0].scan(cursorPos))||(this.shapeArray[1].scan(cursorPos))){
-        return true;
-    } else {
-        return false;
-    }
-};
 
 // Move funtions for each object ---------------------------------------------------
 myCircle.prototype.move = function(moveX,moveY) {
@@ -285,10 +268,6 @@ myFreeForm.prototype.move = function(moveX,moveY) {
     }
 }
 
-myGroup.prototype.move = function(moveX,moveY) {
-    this.shapeArray[0].move(moveX,moveY);
-    this.shapeArray[1].move(moveX,moveY);
-};
 
 // Custom free form drawing functions:
 myFreeForm.prototype.addPt = function(newPt) {
