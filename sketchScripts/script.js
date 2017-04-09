@@ -316,7 +316,7 @@ $(document).ready(function(){
     
     $('#circle').on("click",function()  {
 		document.getElementById("descriptionHeading").innerHTML = '<h1> Description: Circle  </h1>'
-		document.getElementById("description").innerHTML = '<p> Click to anchor the circle as if it were in a frame, then drag to make the connecting, diagonal frame. <br> The circle will be in the middle. </p>'
+		document.getElementById("description").innerHTML = '<p> Click to anchor the circle as if it were in a frame, then drag LEFT TO RIGHT. <br> YOU MUST DRAG LEFT TO RIGHT along the diagonal frame. <br> The circle will be in the middle. </p>'
 		console.log("Switched to circle mode");
         var temp = "circle";
         setMode(temp);
@@ -324,7 +324,7 @@ $(document).ready(function(){
     
     $('#ellipse').on("click",function()  {
 		document.getElementById("descriptionHeading").innerHTML = '<h1> Description: Ellipse </h1>'
-		document.getElementById("description").innerHTML = '<p> A fancy circle that can be wider or more elongated. Click circle to view more instructions. </p>'
+		document.getElementById("description").innerHTML = '<p> A fancy circle that can be wider or more elongated. DRAG LEFT TO RIGHT.<br> Click circle to view more instructions. </p>'
 		console.log("Switched to ellipse mode");
         var temp = "ellipse";
         setMode(temp);
