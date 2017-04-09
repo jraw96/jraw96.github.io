@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<title>3353 Sketch Pad</title>
+<meta charset="iso-8859-1">
+<link rel="stylesheet" href="sketchScripts/layout.css" type="text/css">
+   
+</head>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="sketchScripts/template.js"></script>
+<script src="sketchScripts/shapeTypes.js"></script>
+<script src="sketchScripts/script.js"></script>
+
+
+
+<body>
+<div class="TitleColumn" align = "center">
+
+<h1> Jake's Sketchpad App </h1>
+
+	<div id="MainUI">			
+					
+			<!-- Buttons and Description -->	
+			<div id="Controlls" style="display:inline-block;" align = "top" class="col-lg-6">	
+			
+				<div class="row" >
+					
+				
+					<ul id="ColourType" align = "top" style="display:inline-block;">
+					<h1> Colour </h1>	
+					    <li style="list-style-type: none;"><input type="button" class="button" id="black" value="Black"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="blue" value="Blue"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="red" value="Red"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="yellow" value="Yellow"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="green" value="Green"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="orange" value="Orange"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="purple" value="Purple"></li>
+						<li style="list-style-type: none;"> <br> </li>
+					</ul>
+					
+					
+					
+					<ul id="LineType" align = "top" style="display:inline-block;">	
+						<h1> Drawing Type  </h1>				
+						<!-- Button Menu -->
+						<li style="list-style-type: none;"><input type="button" class="button" id="freeForm" value="FreeForm"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="line"  value="Line"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="rectangle" value="Rectangle"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="ellipse" value="Ellipse"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="circle" value="Circle"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="square" value="Square"></li>
+						<li style="list-style-type: none;"><br> <br> <br> <br> </li>						
+					</ul>
+					
+					<ul id="OptionType" align = "top" style="display:inline-block;">
+					<h1> Options </h1>	
+						<li id="del" style="list-style-type: none;"><input type="button" class="button" value="Delete"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="move" value="Move"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="copy" value="Copy"></li>
+						<li style="list-style-type: none;"><input type="button" class="button" id="paste" value="Paste"></li>
+						
+						<li style="list-style-type: none;"><br> <br> <br> <br> <br> <br> <br> <br> <br> </li>
+						
+					</ul>
+						
+					<div class="row" >
+					<h1> States </h1>
+						<input type="button" class="button" id="load" value="Load">
+						<input type="button" class="button" id="save"  value="Save">
+						<input type="button" class="button" id="undo" value="Undo"></li>
+						<input type="button" class="button" id="redo" value="Redo"></li>	
+						
+					</div>
+					<br> 
+					
+				</div> <!-- End of main row -->
+				
+					
+				
+		
+				</div> <!-- End of column containing all components -->
+	
+				<!-- Drawing Canvas -->
+				<div id="frame" align="center" class="col-lg-4" style="display:inline-block;">
+				
+					<canvas id="canvas" align = "center" width="800" height="500" style="border:1px solid #000000;"></canvas>
+				</div>
+					
+	</div> <!-- End of main Ui -->
+	
+				<div  id="Description" style="display:inline-block;" align="center" class="col-lg-5">					
+
+				
+				 <span id="descriptionHeading"></span> 
+				 <span id="description"></span>
+				 <span id="currentMode"></span>
+				 <span id="currentColour"></span>
+				</div> 
+</div>
+
+</body>
+    
+</html>
