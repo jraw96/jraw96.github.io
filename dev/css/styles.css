@@ -9,3 +9,22 @@
     padding-top: 10px;
     
 }
+
+.responsiveViewDesktop {
+    overflow: visible;
+    white-space: nowrap;
+}
+
+.responsiveViewMobile {
+    display: none;
+}
+
+@media only screen and (max-width: 1187px) {
+    .responsiveViewDesktop {
+        display: none;
+    }
+
+    .responsiveViewMobile {
+        display: block;
+    }
+}
