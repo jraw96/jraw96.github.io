@@ -21,6 +21,7 @@
 	<link rel="stylesheet" href="css/layout.css">
    <link rel="stylesheet" href="css/media-queries.css">
    <link rel="stylesheet" href="css/magnific-popup.css">
+   <link rel="stylesheet" href="css/styles.css">
 
    <!-- Script
    ================================================== -->
@@ -50,7 +51,6 @@
             <li><a class="smoothscroll" href="#resume">Work Experience</a></li>
             <li><a class="smoothscroll" href="#skills">Skills & Education</a></li>
             <li><a class="smoothscroll" href="#portfolio">Projects</a></li>
-            <li><a class="smoothscroll" href="#contact">Contact</a></li>
             <li><a href="resume.pdf" >Resume</a></li>
          </ul> <!-- end #nav -->
 
@@ -95,9 +95,9 @@
 
             <h2>About Me</h2>
 
-            <p>I'm a 4th year software developer with 12 months of co-op work exeperience developing front and back-end solutions.
+            <p style="color: #C0C0C0">I'm a 4th year computer engineering student with 12 months of co-op work exeperience developing front and back-end solutions.
                 <br><br>
-             In my free time I enjoy playing waterloo polo on the Univerity of Western varsity team, and leading video game tournaments
+             In my free time I enjoy playing water polo on the Univerity of Western varsity team, and leading video game tournaments
              in the Western Electroninc Gaming Association (WEGA).
 
              <br><br>
@@ -140,13 +140,13 @@
 
    <!-- Resume Section
    ================================================== -->
-   <section id="resume" style="margin: 0px; padding-bottom: 0px">
+   <section id="resume" style="margin: 0px; padding-bottom: 0px;">
 
-    <div class="container-fluid" style="padding-top: 0px; padding-bottom: 0px; margin-bottom: 0px"></div>
+    <div class="container-fluid" style=" padding-top: 0px; padding-bottom: 0px; margin-bottom: 0px"></div>
      <!-- Work
       ----------------------------------------------- -->
-      <div class="row work">
-
+      <div class="row work" style="position: relative">
+        
          <div class="three columns header-col">
             <h1 style="margin-left: -70px"><span>Work Experience</span></h1>
          </div>
@@ -161,66 +161,79 @@
                            <p class="info">Competed in the RBC Amplify summer student program<span>&bull;</span> <em class="date">May 2018 - August 2018</em></p>
          
                            <p>
-                                 I greatly look forward to May 7th, when this co-op term begins!
+                                 Amplify is a four month long competition where 24 groups of four students compete
+                                 to develop and present a solution, given a problem statement currently facing RBC. I am excited to be part
+                                 of Amplify 2018 as a student developer this May 7th, 2018. 
                            </p>
          
                         </div>
          
                      </div> <!-- item end -->
-
+            <br>
             <div class="row item">
 
                <div class="twelve columns">
 
                   <h3>RBC - Full Stack Developer Co-op</h3>
                   <p class="info">Worked in the Early Talent team under Strategy and Transformation<span>&bull;</span> <em class="date">January 2018 - April 2018</em></p>
+                    <p class="jobFields"><b>Tech Stack: </b>
+                        Java Spring Framework, Zuul edge service, Angular 5, PostgreSQL, Swift
+                    </p>
 
-                  <p>
-                        This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                        Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-                        nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
-                        ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
-                  </p>
+                   <p class="jobFields"> <b>Technologies & Services:</b> 
+                        JPA Hibernate (Database), Oauth 2.0 with OpenID Connect
+                   </p>
 
+                   <p class="jobFields"> <b>Summary:</b><br>
+                    <nobr> - Worked on developing RESTful APIs and authentication mechanisms for RBC's Backpack web application</nobr><br>
+                    <nobr> - Optimized front to back-end database queries to improve user experience on Backpack's dynamic web pages </nobr><br>
+                    <nobr> - Lead multiple programming workshops in the RBC March Break Tech camp, mentoring in the week-end Hackathon</nobr><br>
+                    <nobr> - Wrote an internal iOS application to facillate team building and leadership skills</nobr> <br>
+                   </p>
+                         
+                
                </div>
 
             </div> <!-- item end -->
-
+            <br>
             <div class="row item">
 
                <div class="twelve columns">
 
                   <h3>RBC - Backend Developer Co-op</h3>
                   <p class="info">Worked in the Mid-Tier team under Digital <span>&bull;</span> <em class="date">May 2017 - December 2017</em></p>
-
-                  <p>
-                  This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                  Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-                  nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
-                  ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
+                <p class="jobFields">  <b> Tech Stack:</b> 
+                    Nodejs (Javascript), MongoDB, AngularJS, Twitter Bootstrap CSS</p>
+                   <p class="jobFields"> <b> Technologies:</b>
+                   Elasticsearch, Oauth 2.0 with OpenID Connect </p>
+                   <p class="jobFields"> <b>Summary:</b><br>
+                   <nobr> - Worked collaboratively on internal applications and followed agile development methodologies</nobr><br>
+                   <nobr> - Developed features for OAuth Client authorization across Development and QA environments</nobr><br>
+                   <nobr> - Wrote a proof-of-concept application to demonstrate Elasticsearch performance on various data sets</nobr><br>
+                   <nobr> - Managed and maintained applications in IBM’s Bluemix cloud service</nobr> <br>
                   </p>
 
                </div>
 
             </div> <!-- item end -->
-
+            <br>
             <div class="row item">
 
                     <div class="twelve columns">
      
                        <h3>Engineering Outreach - University Leader</h3>
                        <p class="info">Worked at the University of Waterloo's Engineering Outreach program as a camp counselor<span>&bull;</span> <em class="date">May - August 2014, 2015 & 2016</em></p>
-     
-                       <p>
-                             This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
-                             Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem
-                             nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan
-                             ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non  mauris vitae erat
+                       <p class="jobFields"> <b> Technologies:</b>
+                        Arduino Uno, Adobe Photoshop, MS Powerpoint</p>
+                       <p> <b>Summary: </b> <br>
+                       <nobr> - Designed, budgeted and lead 4 month long technology curriculums for upper elementary students </nobr>
+                       <nobr> - Helped foster a passion for using computers and teaching programming languages in the community </nobr>
+                       <nobr> - Practiced effective communication and time-management skills in team settings </nobr>
                        </p>
      
                     </div>
      
-                 </div> <!-- item end -->
+            </div> <!-- item end -->
 
          </div> <!-- main-col end -->
 
@@ -271,7 +284,7 @@
                 
                                    <ul class="skills">
                                        <li><span class="bar-expand nodejs"></span><em>Node.js</em></li>
-                                  <li><span class="bar-expand spring"></span><em>Spring Framework</em></li>
+                                  <li><span class="bar-expand spring"></span><em>Spring Framework 5.0</em></li>
                                   
                                     </ul>
                 
@@ -369,15 +382,15 @@
             <!-- portfolio-wrapper -->
             <div id="portfolio-wrapper" class="bgrid-thirds s-bgrid-thirds cf">
 
-          	   <div class="columns portfolio-item">
+          	   <div class="columns portfolio-item" >
                   <div class="item-wrap">
 
                      <a href="#modal-01" title="">
-                        <img alt="" src="images/portfolio/coffee.jpg">
+                        <img alt="" src="images/portfolio/pebble.png">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
-          					      <h5>Coffee</h5>
-                              <p>Illustrration</p>
+          					      <h5>Pebble Text Talk</h5>
+                              <p>Smart Watch App</p>
           					   </div>
                         </div>
                         <div class="link-icon"><i class="icon-plus"></i></div>
@@ -390,11 +403,11 @@
                   <div class="item-wrap">
 
                      <a href="#modal-02" title="">
-                        <img alt="" src="images/portfolio/console.jpg">
+                        <img alt="" src="images/portfolio/decoder.png">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
-          					      <h5>Console</h5>
-                              <p>Web Development</p>
+          					      <h5>4x16 Eagle CAD Binary Console</h5>
+                              <p>Custom Arduino PCB</p>
           					   </div>
                         </div>
                         <div class="link-icon"><i class="icon-plus"></i></div>
@@ -407,11 +420,11 @@
                   <div class="item-wrap">
 
                      <a href="#modal-03" title="">
-                        <img alt="" src="images/portfolio/judah.jpg">
+                        <img alt="" src="images/portfolio/gamersNetwork.png">
                         <div class="overlay">
                            <div class="portfolio-item-meta">
-          					      <h5>Judah</h5>
-                              <p>Webdesign</p>
+          					      <h5>Gamers Network</h5>
+                              <p>Web App</p>
           					   </div>
                         </div>
                         <div class="link-icon"><i class="icon-plus"></i></div>
@@ -431,16 +444,17 @@
 
          <div id="modal-01" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-coffee.jpg" alt="" />
+		      <img class="popupPic" src="images/portfolio/pebble.png" alt="" />
 
 		      <div class="description-box">
-			      <h4>Coffee Cup</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-               <span class="categories"><i class="fa fa-tag"></i>Branding, Webdesign</span>
+			      <h4>Pebble Text Talk</h4>
+			      <p>A smart watch app that helps people with hearing impairments. Utilizing microphone and screen features, TextTalk helps you follow a conversation by displaying spoken words for you to read in case you missed them.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Smart Watch App</span>
 		      </div>
 
             <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
+                 <a style="margin-right: 25px" href="https://devpost.com/software/pebble-texttalk">Dev Post</a>
+                 <a href="https://github.com/YanickHoude/PebbleApp">Github</a>
 		         <a class="popup-modal-dismiss">Close</a>
             </div>
 
@@ -448,16 +462,16 @@
 
          <div id="modal-02" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-console.jpg" alt="" />
+		      <img class="popupPic" src="images/portfolio/decoder.png" alt="" />
 
 		      <div class="description-box">
-			      <h4>Console</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-               <span class="categories"><i class="fa fa-tag"></i>Branding, Web Development</span>
+			      <h4>4x16 Eagle CAD Binary Decoder</h4>
+			      <p>This Arduino program lets you initialize a 4x4 Keypad, and control its outputs through a 4x16 binary decoder designed in Eagle Cad.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Ardunio Custom PCB (Printed Circuit Board)</span>
 		      </div>
 
             <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
+               <a href="https://github.com/jraw96/ArduinoKey2BinaryOutput">Github</a>
 		         <a class="popup-modal-dismiss">Close</a>
             </div>
 
@@ -465,17 +479,17 @@
 
          <div id="modal-03" class="popup-modal mfp-hide">
 
-		      <img class="scale-with-grid" src="images/portfolio/modals/m-judah.jpg" alt="" />
+		      <img class="popupPic" src="images/portfolio/gamersNetwork.png" alt="" />
 
 		      <div class="description-box">
-			      <h4>Judah</h4>
-			      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-               <span class="categories"><i class="fa fa-tag"></i>Branding</span>
+			      <h4>Gamers Network</h4>
+			      <p>Whether you're an accomplished pro gamer or aspiring new player, get your ESports profile online and searchable through this MEAN stack web app.</p>
+               <span class="categories"><i class="fa fa-tag"></i>Web App</span>
 		      </div>
 
             <div class="link-box">
-               <a href="http://www.behance.net">Details</a>
-		         <a class="popup-modal-dismiss">Close</a>
+               <a href="https://github.com/jraw96/-Gamer-sNetwork---MEAN-Stack-web-app">Github</a>
+		       <a class="popup-modal-dismiss">Close</a>
             </div>
 
 	      </div><!-- modal-03 End -->
@@ -484,97 +498,6 @@
 
    </section> <!-- Portfolio Section End-->
 
-
-   <!-- Contact Section
-   ================================================== -->
-   <section id="contact">
-
-         <div class="row section-head">
-
-            <div class="two columns header-col">
-
-               <h1><span>Get In Touch.</span></h1>
-
-            </div>
-
-            <div class="ten columns">
-
-                  <p class="lead">Feel free to reach out to me by email or with social media. <br>
-                    Using the form below, you can send a direct message to me. 
-                  </p>
-
-            </div>
-
-         </div>
-
-         <div class="row">
-
-            <div class="eight columns">
-
-               <!-- form -->
-               <form action="" method="post" id="contactForm" name="contactForm">
-					<fieldset>
-
-                  <div>
-						   <label for="contactName">Name <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactName" name="contactName">
-                  </div>
-
-                  <div>
-						   <label for="contactEmail">Email <span class="required">*</span></label>
-						   <input type="text" value="" size="35" id="contactEmail" name="contactEmail">
-                  </div>
-
-                  <div>
-						   <label for="contactSubject">Subject</label>
-						   <input type="text" value="" size="35" id="contactSubject" name="contactSubject">
-                  </div>
-
-                  <div>
-                     <label for="contactMessage">Message <span class="required">*</span></label>
-                     <textarea cols="50" rows="15" id="contactMessage" name="contactMessage"></textarea>
-                  </div>
-
-                  <div>
-                     <button class="submit">Submit</button>
-                     <span id="image-loader">
-                        <img alt="" src="images/loader.gif">
-                     </span>
-                  </div>
-
-					</fieldset>
-				   </form> <!-- Form End -->
-
-               <!-- contact-warning -->
-               <div id="message-warning"> Error boy</div>
-               <!-- contact-success -->
-				   <div id="message-success">
-                  <i class="fa fa-check"></i>Your message was sent, thank you!<br>
-				   </div>
-
-            </div>
-
-
-            <aside class="four columns footer-widgets">
-
-               <div class="widget widget_contact">
-
-					   <h4>Address and Phone</h4>
-					   <p class="address">
-						   Jake Raw<br>
-						   Waterloo, ON <br>
-						   <span>(226) 338-6440</span>
-					   </p>
-
-				   </div>
-
-            
-
-            </aside>
-
-      </div>
-
-   </section> <!-- Contact Section End-->
 
 
    <!-- footer
