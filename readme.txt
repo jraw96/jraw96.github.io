@@ -1,4 +1,4 @@
-
+This was a great template to work with. Here is the credit:
 ==================================================================================================
 
 CEEVEE is a clean, modern, fully responsive site template for your
