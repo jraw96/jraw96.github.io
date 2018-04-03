@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- Hi -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Jake Raw </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/hover.zoom.js"></script>
+    <script src="assets/js/hover.zoom.conf.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">JAKE RAW</a>
+		  <h4> Jtraw@sympatico.ca </h4>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+			<li><a href="index.html#projects">Projects</a></li>
+		    <li><a href="contact.html">Contact</a></li>
+            <li><a href="resume.pdf">Resume</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	</div><!-- /container -->
+	
+
+	<!-- Shopify Application - Task #1 -->
+	<div id="main" class="container" align="left" class="col-lg-8">
+	<script src="script.js"></script>
+	
+	<h2>Shopify Task #1: Calculating Expenses </h2>
+	<h4><b>Step 1:</b> Load a Shopify Order file from your computer.</h4> <p> The 2017 Shopify Intern Order can be found <a href="https://shopicruit.myshopify.com/admin/orders.json?page=1&access_token=c32313df0d0ef512ca64d5b336a0d7c6">here.</a>
+	<br>To download the order as a text file, click<a href="order.txt" download> here. </a><br>
+	To parse the Shopify Order, open the file from your computer: </p>
+	<span id="localOrder"></span>
+	
+	<input type="file" id="fileInput" ><br> <!-- Select file from local computer -->
+	
+	<span id="step2" ></span> <!-- Step 2 details -->
+	<span id="solve" ></span><br><br> <!-- Solve button goes here -->
+	<span id="dataTitle" ></span>	<!-- The title: Data goes here, appears here -->
+	<span id="fileDisplayArea" ></span><!-- contents of selected text file appear here -->
+	
+	
+	<!-- Fade-in data statistcs -->
+	<div id = "answer" align="middle"  style="display:none;" class="answer_list"> 
+	
+		<div style="display:block">
+		<h1><p> Data Statistics </p></h1>
+		</div>
+		
+			<div id="ordersBlock" class="col-lg-2" style="display:inline-block;">
+			<p> Number of orders:</p>
+				<span id="ordersTotal" ></span>
+			</div>
+			
+			<div id="taxable" class="col-lg-2" style="display:inline-block;">
+			<p> Total USD price: </p>
+				<span id="usdTotal" ></span>
+			</div>
+			
+			
+			<div id="total"  class="col-lg-2" style="display:inline-block;">
+			<p> Total subtotal CAD price: </p>
+				<span id="cadSubTotal" ></span>
+			</div>
+			
+			<div id="items" class="col-lg-2" style="display:inline-block;">
+			<p> Total taxes included: </p>
+				<span id="tax" ></span>
+			</div>
+			
+			<div id="discountSection" class="col-lg-2" style="display:inline-block;">
+			<p> Total discounts: </p>
+				<span id="discount" ></span>
+			</div>
+			
+			
+			<div id="totalRevenue"  class="col-lg-2" style="display:inline-block;">
+			<p> Total CAD order revenue: </p>
+			<br>
+				<span id="cadTotal" ></span>
+			</div>
+	
+	</div>
+		
+
+	</div>
+	
+	<!-- +++++ Footer Section +++++ -->
+	<div id="footer">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h4>Address</h4>
+					<p>
+						63 Dunbar Road South,<br/>
+						N2L 2E2 <br>
+						Waterloo, ON <br/>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>Find me on two social medias</h4>
+					<p>
+						<a href="https://ca.linkedin.com/in/jake-raw-a3950b107">Linkedin</a><br/>
+						<a href="https://www.facebook.com/profile.php?id=100004082899161">Facebook</a>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>Add me in Battle.net and <br> League of Legends </h4>
+					<p>Battle Tag: Azorac#1921 <br>
+					Summoners name: luluL3mon</p>
+				</div><!-- /col-lg-4 -->
+			
+			</div>
+		
+		</div>
+		<center> 2016 www.jakeraw.com | All Rights Reserved </center>
+	</div>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
