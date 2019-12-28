@@ -1,842 +1,1660 @@
-<!DOCTYPE html>
-<!--[if lt IE 8 ]><html class="no-js ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="no-js ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 8)|!(IE)]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
+<!doctype html>
+<html lang="en">
 
 <head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<title>Jake Raw</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="vendors/linericon/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+	<link rel="stylesheet" href="vendors/animate-css/animate.css">
+	<link rel="stylesheet" href="vendors/popup/magnific-popup.css">
+	<link rel="stylesheet" href="vendors/flaticon/flaticon.css">
+	<!-- main css -->
+	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="album1.css">
+	<link rel="stylesheet" href="album2.css">
+	<!-- 	<link rel="stylesheet" href="css/gallery.css"> -->
+	<link rel="stylesheet" href="css/responsive.css">
 
-    <!--- Basic Page Needs
-   ================================================== -->
-    <meta charset="utf-8">
-    <title>Jake Raw</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Mobile Specific Metas
-   ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/default.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/media-queries.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Script
-   ================================================== -->
-    <script src="js/modernizr.js"></script>
-
-    <!-- Favicons
-	================================================== -->
-    <link rel="shortcut icon" href="favicon.ico">
-
-
+	<!-- 	<link href="https://fonts.googleapis.com/css?family=Raleway:600,900" rel="stylesheet"> -->
 </head>
 
-<body>
+<body style="background-image: url('./textures/gplaypattern.png')">
 
-    <!-- Header
-   ================================================== -->
-    <header id="home">
+	<!--================Header Menu Area =================-->
+	<header class="header_area background-color">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container box_1620">
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav ml-auto">
+							<li class="nav-item">
+								<a class="nav-link" style="cursor: pointer" id="home-label"
+									onclick="greyAllLables(); showSection('home')">Home</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" style="cursor: pointer" id="about-label"
+									onclick=" greyAllLables(); showSection('about')">About</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" style="cursor: pointer; white-space: pre;" id="experience-label"
+									onclick="greyAllLables(); showSection('experience')">Experience</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" style="cursor: pointer" id="skills-label"
+									onclick="greyAllLables(); showSection('skills')">Skills</a>
+							</li>
+							<li class="nav-item">
+								<span class="nav-link"> | </span>
+							</li>
+							<li class="nav-item submenu dropdown">
+								
+								
 
-        <nav id="nav-wrap">
+									<div class="dropdown">
+											<a href="#" style="cursor: default" class="nav-link dropdown-toggle" id="travel-label"
+									data-toggle="dropdown" role="button" aria-haspopup="true"
+									aria-expanded="false">Travel</a>
+											<div class="dropdown-content">
+											  <a href="#" onclick="greyAllLables(); showSection('france')">France 2019</a>
+											  <a href="#" onclick="greyAllLables(); showSection('vietnam')">Vietnam 2019</a>
+										
+											</div>
+										  </div>
+										  
+										  <!--
+								<ul class="dropdown-menu" style="margin: -10px 0px 0px -20px">
+									<li class="nav-item" style="cursor: pointer">
+										<a class="nav-link" onclick="greyAllLables(); showSection('vietnam')">Vietnam
+											2019</a>
+									</li>
+									<li class="nav-item" style="cursor: pointer">
+										<a class="nav-link" onclick="greyAllLables(); showSection('france')">France
+											2019</a>
+									</li>
+								</ul>
+							-->
 
-            <a class="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
-            <a class="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
-
-            <ul id="nav" class="nav">
-                <li class="current">
-                    <a class="smoothscroll" href="#home">Home</a>
-                </li>
-                <li>
-                    <a class="smoothscroll" href="#about">About</a>
-                </li>
-                <li>
-                    <a class="smoothscroll" href="#resume">Work Experience</a>
-                </li>
-                <li>
-                    <a class="smoothscroll" href="#skills">Skills & Education</a>
-                </li>
-                <li>
-                    <a class="smoothscroll" href="#portfolio">Projects</a>
-                </li>
-                <li>
-                    <a href="resume.pdf">Resume</a>
-                </li>
-            </ul>
-            <!-- end #nav -->
-
-            <!-- maybe add this: <a href="mailto:jtraw96@gmail.com"> -->
-            <!--   <span style="float:right; margin: -33px 5px 0px 0px; padding: 0px; color: #D3D3D3">jtraw96@gmail.com</span> -->
-
-        </nav>
-        <!-- end #nav-wrap -->
-
-        <div class="row banner">
-            <div class="banner-text">
-                <h1 class="responsive-headline">Hi, I'm Jake.</h1>
-                <h3>I'm a fourth year
-                    <span> computering engineering </span> student,
-                    <br> passionate about
-                    <span>web development</span> and
-                    <span> cloud technologies.</span>
-                    <br>Feel free to
-                    <a class="smoothscroll" href="#about">start scrolling</a>
-                    and learn more
-                    <a class="smoothscroll" href="#about">about me</a>.</h3>
-
-                <hr />
-                <ul class="social">
-                    <li>
-                        <a href="https://www.facebook.com/profile.php?id=100004082899161">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/jake-raw-a3950b107/">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/jraw96">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </li>
-                    <li style="opacity:0.3">|</li>
-                    <li style="font-size: 20px; color: white">
-                        <span style="margin-top: -3px;display: inline-block; vertical-align: top">jtraw96@gmail.com</span>
-                        </jtraw96>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <p class="scrolldown">
-            <a class="smoothscroll" href="#about">
-                <i class="icon-down-circle"></i>
-            </a>
-        </p>
-
-    </header>
-    <!-- Header End -->
+							
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="books-label" style="cursor: pointer"
+									onclick="greyAllLables(); showSection('books')">Books</a>
+							</li>
+							<li class="nav-item">
+								<span class="nav-link"> | </span>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" id="resume-label" style="cursor: pointer" href="resume.pdf"
+									target="_blank" onclick="greyResume()">Resume</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
 
 
-    <!-- About Section
-   ================================================== -->
-    <section id="about">
-
-        <div class="row">
 
 
-            <div class="five columns" style="height: 100%">
+	<!--================ Home Section =================-->
+	<section class="home_banner_area " id="home">
+		<div class="container box_1620">
+			<div class="banner_inner d-flex align-items-center">
+				<div class="banner_content">
+					<div class="media">
 
-                <img class="jake-pic mobile" src="images/jake.jpg" />
-                <img class="jake-pic desktop" src="images/jake.jpg" />
+						<img style="max-width: 50%; margin-right: 4%" src="img/profile.jpg" alt="">
 
-            </div>
+						<div class="media-body fade-in">
+							<div class="personal_text">
+								<h6>Hello, I'm </h6>
+								<h3>Jake Raw</h3>
+								<h4>Coffee · Books · Computer Engineering</h4>
+								<p>I'm a recent computer engineering graduate, passionate about web development and cloud
+									technologies.
+									<br> Feel free to explore this site to learn more about me.</p>
+								<ul class="list basic_info" style="margin-top: 17px;
+								margin-bottom: -5px;">
+									<li>
+										<a href="#">
+											<i class="lnr lnr-envelope"></i> jtraw96@gmail.com</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="lnr lnr-phone-handset"></i> (226) 338-6440</a>
+									</li>
 
-            <div class="seven columns main-col">
-
-                <h2>About Me</h2>
-
-                <p style="color: #C0C0C0">I'm a 4th year computer engineering student with 16 months of co-op work experience developing full stack solutions.
-                    <br>
-                    <br> In my free time I enjoy playing water polo on the Western University varsity team and leading video
-                    game tournaments in the Western Electroninc Gaming Association (WEGA).
-
-                    <br>
-                    <br> I'm currently tackling the list of
-                    <a href="https://1001bookreviews.com/the-1001-book-list/"> 1001 Books to Read Before you Die. </a>
-                    I recently finished
-                    <i>Saturday</i> by Ian McEwan, and am currently reading
-                    <i>Anna Karenina</i> by Leo Tolstoy. Great stuff.
-
-                </p>
-
-                <div class="row">
-
-                    <div class="columns contact-details">
-
-                        <h2>Contact Details</h2>
-                        <p class="address">
-                            <span>Jake Raw</span>
-                            <br>
-                            <span>
-                                Waterloo, ON Canada
-                            </span>
-                            <br>
-                            <span>(226) 338-6440</span>
-                            <br>
-                            <span>jtraw96@gmail.com</span>
-                        </p>
-
-                    </div>
-
-                    <div class="columns download">
-                        <p>
-                            <a href="resume.pdf" class="button" download>
-                                <i class="fa fa-download"></i>Download Resume</a>
-                        </p>
-                    </div>
-
-                </div>
-                <!-- end row -->
-
-            </div>
-            <!-- end .main-col -->
-
-        </div>
-
-    </section>
-    <!-- About Section End-->
+									<li>
+										<a href="#">
+											<i class="lnr lnr-home"></i>Toronto, Ontario</a>
+									</li>
+								</ul>
+								<ul class="list personal_social">
+									<li>
+										<a href="#">
+											<i class="fa fa-facebook"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-github"></i>
+										</a>
+									</li>
+									<li>
+										<a href="#">
+											<i class="fa fa-linkedin"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 
-    <!-- Resume Section
-   ================================================== -->
-    <section id="resume" style="margin: 0px; padding-bottom: 0px;">
+	<!--================ About Area =================-->
+	<section class="home_banner_area page-load " id="about">
+		<div class="container box_1620">
+			<div class="banner_inner d-flex align-items-center">
+				<div class="banner_content">
+					<div class="media">
 
-        <div class="container-fluid" style=" padding-top: 0px; padding-bottom: 0px; margin-bottom: 0px"></div>
-        <!-- Work
-      ----------------------------------------------- -->
-        <div class="row resume">
+					
+						<div class="flex-about">
+								<div class=" fade-in">
+										<div class="personal_text">
+											<label style="color: rgba(0, 0, 0, 1.9); font-size: 20px">About me</label>
+											<p> I'm a recent computer engineering graduate from the University of Western Ontario, with
+												industry experience doing full stack development for enterprise and start-up level companies. I enjoy using
+												tabs, learning the latest Javascript frameworks and finding creative ways to automate processes.   
+												<br>
+												
+												
+												<div style="margin: 12px 0px 12px 0px; color: #777777">
+												My top three hobbies are: <br>
+									
+														<span class="bold-text">• Reading Books:</span> <span style="    font-weight: 300; cursor: pointer;   text-decoration: underline;
+														" onclick="greyAllLables(); showSection('books')"> Here </span> is a selection of some of my favourites  <br>
+														<span class="bold-text">• Board Games:</span> Avid Scrabble and Blokus player <br>
+														<span class="bold-text">• Video Games:</span> Huge fan of PC and console games, as well as watching Esports <br>
+					
+										
+												</div>
 
-            <div class="three columns header-col">
-                <h1>
-                    <span>Work Experience</span>
-                </h1>
-            </div>
+												<span style="color: #777777">
+													
+												I'm currently living in Toronto and have two favourite coffee shops:
+												<a target="_blank"  href='https://www.google.ca/maps/place/Dark+Horse+Espresso+Bar/@43.6506042,-79.3989859,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34c4aa52e483:0x277af391d99e27ad!8m2!3d43.6506265!4d-79.3968412'>Dark Horse Espresso </a> and 
+												<a target="_blank" href="https://www.google.ca/maps/place/Jimmy's+Coffee/@43.6452788,-79.402452,17z/data=!3m1!4b1!4m5!3m4!1s0x882b35c277632b6d:0xcc874f7236d36dcc!8m2!3d43.6452788!4d-79.4002633">Jimmy's Coffee. </a> 
+												If you have any recommendations for new places to try, I'd 
+												love to hear from you at <a href="mailto:jtraw96@gmail.com">jtraw96@gmail.com</a>. </span></p>
+										</div>
+									</div>
+			
+									<img style="width: 43%; height: 38%;     margin-left: 14px;" src="img/aboutme.jpg" alt="">
+						</div>
 
-            <div class="nine columns main-col">
 
-                <div class="row item">
+			
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-                    <div class="twelve columns">
 
-                        <h3>RBC - Amplify Software Developer </h3>
-                        <p class="info">Worked in Innovation under Technology and Operations
-                            <span>&bull;</span>
-                            <em class="date">May 2018 - August 2018</em>
-                        </p>
+	<!--================ Experience Area =================-->
+	<section class="home_banner_area page-load stretch" id="experience">
+
+		<!-- Job Experience -->
+		<div class="container box_1620 work-cards" style="max-width: 680px;">
+
+			<div class="container fade-in">
+				<div class="tabs_inner">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a onclick="showExperience()" class="nav-link active" id="home-tab" data-toggle="tab"
+								href="#home" role="tab" aria-controls="home" aria-selected="true">My Experience</a>
+						</li>
+						<li class="nav-item">
+							<a onclick="showEducation()" class="nav-link" id="profile-tab" data-toggle="tab"
+								href="#profile" role="tab" aria-controls="profile" aria-selected="false">My
+								Education</a>
+						</li>
+					</ul>
+
+
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="experiences" role="tabpanel"
+							aria-labelledby="home-tab">
+							<ul class="list">
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<div style="min-width: 200px;">
+												<p style="text-align: right;">August 2019 to present</p>
+											</div>
+
+										</div>
+										<div class="media-body">
+											<div class="media-body">
+												<h4>
+													<a href="#job1" style="color:#777777">RBC Royal Bank</a>
+												</h4>
+												<p>Full Stack Developer
+													<br />Toronto, Ontario</p>
+											</div>
+
+										</div>
+									</div>
+								</li>
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<div style="min-width: 200px;">
+												<p style="text-align: right;">June 2018 to August 2019</p>
+											</div>
+										</div>
+										<div class="media-body">
+											<h4> <a href="#job2" style="color:#777777">VoiceFlow </a></h4>
+											<p>Back-End Developer
+												<br />Toronto, Ontario</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<div style="min-width: 200px;">
+												<p style="text-align: right;">May 2018 to August 2018</p>
+											</div>
+										</div>
+										<div class="media-body">
+											<h4> <a href="#job3" style="color:#777777">RBC Amplify Software Developer</a></h4>
+											<p>Full Stack Developer
+												<br />Toronto, Ontario</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<div style="min-width: 200px;">
+												<p style="text-align: right;">January 2018 to April 2018</p>
+											</div>
+										</div>
+										<div class="media-body">
+											<h4>  <a href="#job4" style="color:#777777">RBC Royal Bank</a></h4>
+											<p>Front-End Developer
+												<br />Toronto, Ontario</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<div style="min-width: 200px;">
+												<p style="text-align: right;">May 2017 to December 2017</p>
+											</div>
+										</div>
+										<div class="media-body">
+											<h4><a href="#job5" style="color:#777777">RBC Royal Bank</a> </h4>
+											<p>Back-End Developer
+												<br />Toronto, Ontario</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div class="tab-pane fade show" id="education">
+							<ul class="list">
+								<li>
+									<span></span>
+									<div class="media">
+										<div class="d-flex">
+											<div style="min-width: 200px;">
+												<p style="text-align: right;">September 2014 to April 2019</p>
+											</div>
+										</div>
+										<div class="media-body">
+											<h4>University of Western Ontario, London ON</h4>
+											<p>B.E.Sc. Computer Engineering
+												<br />• With Professional Internship</p>
+											
+										</div>
+									</div>
+								</li>
+								<li>
+										<span></span>
+										<div class="media">
+											<div class="d-flex">
+												<div style="min-width: 200px;">
+													<p style="text-align: right;">September 2010 to June 2014</p>
+												</div>
+											</div>
+											<div class="media-body">
+												<h4>Waterloo Collegiate Institute, Waterloo ON</h4>
+												<p>High School Diploma</p>
+											
+											</div>
+										</div>
+									</li>
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<div id="education-card">
+
+		</div>
+
+		<div id="experience-cards">
+			<!-- Job Experience -->
+			<div class="container box_1620 work-cards" id="job1">
+				<div class=" fade-in">
+					<!-- Row 1 -->
+					<div class="media-body flexbox-container">
+						<div class="flex-row">
+							<div class="flex-column-left date-column">
+								<div>
+									<div class="left">
+										<h3> August 2019 - </h3>
+										<h3> Present </h3>
+										<p>Toronto, ON</p>
+									</div>
+								</div>
+							</div>
+							<div class="flex-column">
+								<!-- Experience Titles-->
+								<div class="right">
+									<h3>RBC - Full Stack Developer</h3>
+									<i>Business Financial Services in Personal and Commercial Banking</i>
+
+
+									<p>
+										<span style="font-weight: bold">Tech Stack: </span>
+										Node.js, Angular 7 with
+										<a href="https://ngrx.io/" target="_blank">NgRx</a>: Reactive State Management
+										inspired by Redux
+									</p>
+
+									<p>
+										<span style="font-weight: bold">Summary:</span>
+
+										<br>
+										- Developing a new full stack application to automate risk assessment
+										<br>
+										- Integrating both new and legacy web services into one interface
+										<br>
+										- Working closely with designers and product owners
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+						<!-- Job Experience -->
+
+						<div class="container box_1620 work-cards" id="job2">
+								<div class=" fade-in">
+									<!-- Row 1 -->
+									<div class="media-body flexbox-container">
+										<div class="flex-row">
+											<div class="flex-column-left date-column">
+												<div>
+													<div class="left">
+														<h3> June 2018 - </h3>
+														<h3> August 2018</h3>
+														<p>Toronto, ON</p>
+													</div>
+												</div>
+											</div>
+											<div class="flex-column">
+												<!-- Experience Titles-->
+												<div class="right">
+													<h3>Voiceflow - Full Stack Developer Contractor </h3>
+													<i>Worked directly with founders</i>
+				
+				
+													<p>
+														<span style="font-weight: bold">Tech Stack: </span>
+														Node.js, React.js, Amazon Web Services
+													</p>
+				
+													<p>
+														<span style="font-weight: bold">Summary:</span>
+				
+				
+														<br> - Configured in-skill purchasing within the Voiceflow Amazon Alexa application
+				
+														<br> - Wrote AWS Lambda Functions for API communication between the Amazon Echo and Node.js server, reducing latency
+				
+													</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+
+
+
+			<!-- Job Experience -->
+			<div class="container box_1620 work-cards" id="job3">
+				<div class=" fade-in">
+					<!-- Row 1 -->
+					<div class="media-body flexbox-container">
+						<div class="flex-row">
+							<div class="flex-column-left date-column">
+								<div>
+									<div class="left">
+										<h3> May 2018 - </h3>
+										<h3> August 2018</h3>
+										<p>Toronto, ON</p>
+									</div>
+								</div>
+							</div>
+							<div class="flex-column">
+								<!-- Experience Titles-->
+								<div class="right">
+									<h3>RBC - Amplify Software Developer </h3>
+									<i>Worked in Innovation in Technology and Operations</i>
+								
+
+									<p>
+										<span style="font-weight: bold">Tech Stack: </span>
+										Node.js, React.js, Elasticsearch, Logstash & Kibana,
+									</p>
+
+									<p>
+										<span style="font-weight: bold">Summary:</span>
+
+
+										<br> - Designed a new back-end infrastructure to securely access and perform
+										analyses on large datasets, accelerating
+										recovery times for incorrect payments.
+
+										<br> - Awarded a provisional patent for the algorithm implemented in our error
+										detection strategy
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+			<!-- Job Experience -->
+			<div class="container box_1620 work-cards" id="job4">
+				<div class=" fade-in">
+					<!-- Row 1 -->
+					<div class="media-body flexbox-container">
+						<div class="flex-row">
+							<div class="flex-column-left date-column">
+								<div>
+									<div class="left">
+										<h3> January 2018 - </h3>
+										<h3> April 2018</h3>
+										<p>Toronto, ON</p>
+									</div>
+								</div>
+							</div>
+							<div class="flex-column">
+								<!-- Experience Titles-->
+								<div class="right">
+									<h3>RBC - Full Stack Developer Co-op </h3>
+									<i>Worked in Early Talent in Technology and Operations</i>
 						
-						  <p class="jobFields">
-                            <b>Tech Stack: </b>
-                            Node.js, React.js, Elasticsearch, Logstash & Kibana,
-                        </p>
+									<p>
+										<span style="font-weight: bold">Tech Stack: </span>
+										Java Spring Framework, Zuul gateway service, Angular 5, PostgreSQL
+									</p>
+
+									<p>
+										<span style="font-weight: bold">Summary:</span>
+
+
+										<br> - Worked on developing RESTful APIs and authentication mechanisms for RBC Backpack
+
+										<br> -  Optimized front to back-end database queries to improve user experience on Backpack's dynamic web pages
+
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Job Experience -->
+			<div class="container box_1620 work-cards" id="job5">
+				<div class=" fade-in">
+					<!-- Row 1 -->
+					<div class="media-body flexbox-container">
+						<div class="flex-row">
+							<div class="flex-column-left date-column">
+								<div>
+									<div class="left">
+										<h3> May 2017 - </h3>
+										<h3> December 2017</h3>
+										<p>Toronto, ON</p>
+									</div>
+								</div>
+							</div>
+							<div class="flex-column">
+								<!-- Experience Titles-->
+								<div class="right">
+									<h3>RBC - Back-End Developer</h3>
+									<i>Worked in Mid-Tier Services in Technology and Operations</i>
+									
+
+									<p>
+										<span style="font-weight: bold">Tech Stack: </span>
+										Node.js, AngularJS, MongoDB, Elasticsearch
+									</p>
+
+									<p>
+										<span style="font-weight: bold">Summary:</span>
+
+
+										<br> - Developed features for OAuth client authorization across Development and QA environments
+
+										<br> - Wrote a proof-of-concept application to demonstrate Elasticsearch performance on various data sets
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--================ Skills Area =================-->
+	<section class="home_banner_area page-load  " id="skills">
+		<div class="container box_1620">
+			<div class="fade-in">
+				<div>
+					<h3>Skills</h3>
+					<p>I've learned many technologies in my career so far and plan to never stop learning more. 
+						Here are my top skills as a full stack developer: </p>
+				</div>
+
+
+				<div class="banner_inner d-flex align-items-center">
+					<!-- Programming Languages-->
+					<div class="banner_content">
+						<div class="media">
+
+							<div class="tools_expert">
+								<h4 style="margin-bottom: 30px;">Programming Languages</h4>
+								<div class="skill_main">
+									<div class="skill_item">
+										<h4>Javascript
+											<span class="counter">90</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="90"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill_item">
+										<h4>Typescript
+											<span class="counter">90</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="90"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill_item">
+										<h4>Java
+											<span class="counter">70</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="70"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill_item">
+										<h4>Python
+											<span class="counter">65</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="65"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill_item">
+										<h4>C++
+											<span class="counter">60</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="60"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Programming concepts-->
+					<div class="banner_content">
+						<div class="media">
+
+							<div class="tools_expert">
+								<h4 style="margin-bottom: 30px;">Programming Concepts</h4>
+								<div class="skill_main">
+									<div class="skill_item">
+										<h4>Object Oriented Programming
+											<span class="counter">95</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="95"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill_item">
+										<h4>Cloud Computing
+											<span class="counter">85</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="85"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill_item">
+										<h4>Functional Programming
+											<span class="counter">75</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="75"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill_item">
+										<h4>Unit/Integration Testing
+											<span class="counter">70</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="70"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill_item">
+										<h4>Dynamic Programming
+											<span class="counter">55</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="55"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Web Technologies -->
+					<div class="banner_content">
+						<div class="media">
+
+							<div class="tools_expert">
+								<h4 style="margin-bottom: 30px;">Web Technologies</h4>
+								<div class="skill_main">
+									<div class="skill_item">
+										<h4>Node.js
+											<span class="counter">90</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="90"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill_item">
+										<h4>Angular 2.x+
+											<span class="counter">80</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="80"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill_item">
+										<h4>RxJS
+											<span class="counter">75</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="75"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill_item">
+										<h4>Redux
+											<span class="counter">75</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="75"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+									<div class="skill_item">
+										<h4>React.js
+											<span class="counter">40</span>%</h4>
+										<div class="progress_br">
+											<div class="progress">
+												<div class="progress-bar" role="progressbar" aria-valuenow="40"
+													aria-valuemin="0" aria-valuemax="100"></div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!--================ Travel Area =================-->
+	<section class="home_banner_area page-load " id="vietnam">
+		<div class="container box_1620">
+			<div class="banner_inner d-flex align-items-center">
+				<div class="banner_content">
+					<div class="media">
+
+
+						<div class="flex-column">
+								<img style="max-width: 95%; margin-right: 4%" src="vietnamJourney.png" alt="">
+
+<div>
+	<p style="text-align: center; color: #777777">Google Maps of locations visited, starting in Hanoi</p>
+</div>
+						</div>
+							
 						
-						<p class="jobFields">
-                            <b>Summary:</b>
-                            <br>
- 
-                            <div class="responsiveViewMobile">
-							<div style="max-width: 400px">
-                                - Designed a new backend infrastructure to securely access and perform analyses on large datasets, accelerating recovery times for incorrect payments. 
-                               </div>
-								<br> - Awarded a provisional patent for the algorithm implemented in our error detection strategy
-                                <br>
-                            </div>
-							 <div class="responsiveViewDesktop">
-								<span style="white-space: normal">
-                                - Designed a new backend infrastructure to securely access and perform analyses on large datasets, accelerating recovery times for incorrect payments. 
-                               </span>
-							 <br> - Awarded a provisional patent for the algorithm implemented in our error detection strategy
-                                <br>
-                            </div>
-                        </p>
-
-                    </div>
-
-                </div>
-                <!-- item end -->
-<br>
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-                        <h3>VoiceFlow - Full Stack Developer Contractor</h3>
-                        <p class="info">Worked directly with the entire team in their Toronto incubator space
-                            <span>&bull;</span>
-                            <em class="date">June 2018 - August 2018</em>
-                        </p>
-						
-						  <p class="jobFields">
-                            <b>Tech Stack: </b>
-                            Node.js, React.js, Amazon Web Services,
-                        </p>
-						
-						<p class="jobFields">
-                            <b>Summary:</b>
-                            <br>
- 
-                            <div class="responsiveViewMobile">
-							<div style="max-width: 400px">
-                                - Configured in-skill purchasing within the Voiceflow Amazon Alexa application
-                               </div>
-								<br> - Wrote AWS Lambda Functions for API communication between the Amazon Echo
-                                and Node.js backend server; reducing latency
-                                <br>
-                            </div>
-							 <div class="responsiveViewDesktop">
-								<span style="white-space: normal">
-                                - Configured in-skill purchasing within the Amazon Alexa application
-                               </span>
-							 <br> - Wrote AWS Lambda Functions for API communication between the Amazon Echo
-                             and Node.js backend server; reducing latency
-                                <br>
-                            </div>
-                        </p>
-
-                    </div>
-
-                </div>
-                <!-- item end -->
-
-
-
-
-
-
-
-
-                <br>
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-                        <h3>RBC - Full Stack Developer Co-op</h3>
-                        <p class="info">Worked in the Early Talent team under Strategy and Transformation
-                            <span>&bull;</span>
-                            <em class="date">January 2018 - April 2018</em>
-                        </p>
-                        <p class="jobFields">
-                            <b>Tech Stack: </b>
-                            Java Spring Framework, Zuul edge service, Angular 5, PostgreSQL, Swift
-                        </p>
-
-                        <p class="jobFields">
-                            <b>Technologies & Services:</b>
-                            Hibernate with JPA (Database API), Oauth 2.0 with OpenID Connect
-                        </p>
-
-                        <p class="jobFields">
-                            <b>Summary:</b>
-                            <br>
-                            <div class="responsiveViewDesktop">
-                                - Worked on developing RESTful APIs and authentication mechanisms for RBC's Backpack
-                                <br> - Optimized front to back-end database queries to improve user experience on Backpack's
-                                dynamic web pages
-                                <br> - Lead multiple programming workshops in the RBC March Break Tech camp, mentoring in the
-                                week-end Hackathon
-                                <br> - Wrote an internal iOS application to facillate team building and leadership skills
-                                <br>
-                            </div>
-                            <div class="responsiveViewMobile">
-                                - Worked on developing RESTful APIs and authentication mechanisms for RBC's Backpack
-                                <br> - Optimized front to back-end database queries to improve user experience on Backpack's
-                                dynamic web pages
-                                <br> - Lead multiple programming workshops in the RBC March Break Tech camp, mentoring in the
-                                week-end Hackathon
-                                <br> - Wrote an internal iOS application to gamify the group leadership model
-                                <br>
-                            </div>
-                        </p>
-                    </div>
-
-                </div>
-                <!-- item end -->
-                <br>
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-                        <h3>RBC - Backend Developer Co-op</h3>
-                        <p class="info">Worked in the Mid-Tier team under Digital
-                            <span>&bull;</span>
-                            <em class="date">May 2017 - December 2017</em>
-                        </p>
-                        <p class="jobFields">
-                            <b> Tech Stack:</b>
-                            Nodejs (Javascript), MongoDB, AngularJS, Twitter Bootstrap CSS</p>
-                        <p class="jobFields">
-                            <b> Technologies:</b>
-                            Elasticsearch, Oauth 2.0 with OpenID Connect </p>
-                        <p class="jobFields">
-                            <b>Summary:</b>
-                            <br>
-                            <div class="responsiveViewDesktop">
-                                - Developed features for Oauth Client authorization across Development and QA environments
-                                <br> - Worked collaboratively on internal applications and followed agile development methodologies
-                                <br> - Wrote a proof-of-concept application to demonstrate Elasticsearch performance on various
-                                data sets
-                                <br> - Managed and maintained applications in IBM’s Bluemix cloud service
-                                <br>
-                            </div>
-                            <div class="responsiveViewMobile">
-                                - Developed features for Oauth Client authorization across Development and QA environments
-                                <br> - Worked collaboratively on internal applications and followed agile development methodologies
-                                <br> - Wrote a proof-of-concept application to demonstrate Elasticsearch performance on various
-                                data sets
-                                <br> - Managed and maintained applications in IBM’s Bluemix cloud service
-                                <br>
-                            </div>
-                        </p>
-
-                    </div>
-
-                </div>
-                <!-- item end -->
-                <br>
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-                        <h3>Engineering Outreach - University Leader</h3>
-                        <p class="info">Worked at the University of Waterloo's Engineering Outreach program as a camp counselor
-                            <span>&bull;</span>
-                            <em class="date">May - August 2014, 2015 & 2016</em>
-                        </p>
-                        <p class="jobFields">
-                            <b> Technologies:</b>
-                            Arduino Uno, Adobe Photoshop, MS Powerpoint</p>
-                        <p class="jobFields">
-                            <b>Summary: </b>
-                            <div class="responsiveViewDesktop">
-                                - Designed, budgeted and lead 4 month long technology curriculums for upper year elementary students
-                                <br> - Helped foster a passion for using computers and teaching programming languages in the
-                                community
-                                <br> - Practiced effective communication and time-management skills in team settings
-                                <br>
-                            </div>
-                            <div class="responsiveViewMobile">
-                                - Designed, budgeted and lead 4 month long technology curriculums for upper year elementary students
-                                <br> - Helped foster a passion for using computers and teaching programming languages in the
-                                community
-                                <br> - Practiced effective communication and time-management skills in team settings
-                                <br>
-                            </div>
-                        </p>
-
-                    </div>
-
-                </div>
-                <!-- item end -->
-
-            </div>
-            <!-- main-col end -->
-
-        </div>
-        <!-- End Work -->
-
-
-
-    </section>
-    <!-- Resume Section End-->
-
-    <!-- Skills
-      ----------------------------------------------- -->
-    <hr>
-    <section id="skills" style="margin-top: -70px; padding-top: 60px">
-
-        <div class="row skills">
-
-            <div class="three columns header-col">
-                <h1>
-                    <span>Development Skills</span>
-                </h1>
-            </div>
-
-
-            <div class="three columns ">
-
-                <h3 style="margin-bottom: 42.5px">Languages
-                </h3>
-
-                <div class="bars">
-
-                    <ul class="skills">
-                        <li>
-                            <span class="bar-expand javascript"></span>
-                            <em>Javascript</em>
-                        </li>
-                        <li>
-                            <span class="bar-expand htmlcss"></span>
-                            <em>HTML/CSS</em>
-                        </li>
-                        <li>
-                            <span class="bar-expand java"></span>
-                            <em>Java</em>
-                        </li>
-                        <li>
-                            <span class="bar-expand swift"></span>
-                            <em>Swift</em>
-                        </li>
-                        <li>
-                            <span class="bar-expand cplusplus"></span>
-                            <em>C++</em>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- end skill-bars -->
-
-            </div>
-            <!-- main-col end -->
-
-
-            <div class="three columns">
-
-                <h3>Server-Side Platforms
-                </h3>
-
-                <div class="bars" style="margin-bottom: -5px">
-
-                    <ul class="skills">
-                        <li>
-                            <span class="bar-expand nodejs"></span>
-                            <em>Node.js</em>
-                        </li>
-                        <li style="padding-top: 10px">
-                            <p style="margin-top: -20px; "><em>Spring Framework 5.0</em></p> 
-                            <span class="bar-expand spring"></span>
-                            
-                        </li>
-
-                    </ul>
-
-                </div>
-                <!-- end skill-bars -->
-
-
-                <h3>Client-Side Frameworks
-                </h3>
-
-                <div class="bars">
-
-                    <ul class="skills">
-                        <li>
-                            <span class="bar-expand angular2plus"></span>
-                            <em>Angular 2.0-5.0</em>
-                        </li>
-                        <li>
-                            <span class="bar-expand angular"></span>
-                            <em>AngularJS</em>
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- end skill-bars -->
-
-
-
-            </div>
-            <!-- main-col end -->
-
-
-
-            <div class="three columns">
-
-
-                <h3>Database Technologies
-                </h3>
-
-                <div class="bars">
-
-                    <ul class="skills">
-                        <li>
-                            <span class="bar-expand mongo"></span>
-                            <em>MongoDB</em>
-                        </li>
-                        <li>
-                            <span class="bar-expand postgresql"></span>
-                            <em>PostgreSGL</em>
-                        </li>
-                        <li>
-                            <span class="bar-expand elasticsearch"></span>
-                            <em>Elasticsearch</em>
-                        </li>
-                        <li style="padding-top: 10px">
-                           <p style="margin-top: -20px; "><em>GraphQL <br> (Query Language)</em></p> 
-                            <div class="bar-expand graphql"></div>
-                            
-                        </li>
-                    </ul>
-
-                </div>
-                <!-- end skill-bars -->
-
-            </div>
-
-
-
-        </div>
-        <!-- End skills -->
-
-
-        <!-- Education
-      ----------------------------------------------- -->
-        <div class="row education">
-
-            <div class="three columns header-col">
-                <h1>
-                    <span>Education</span>
-                </h1>
-            </div>
-
-            <div class="nine columns main-col">
-
-                <div class="row item">
-
-                    <div class="twelve columns">
-
-                        <h3>University of Western Ontario</h3>
-                        <h4>Computer Engineering B.E.Sc</h4>
-                        <p class="info">
-
-                            Faculty of Engineering
-                            <span>&bull;</span>
-                            Undergraduate (Year 4)
-                            <br>
-                            <em class="date">Graduation Date: May 2019</em>
-                        </p>
-
-
-                    </div>
-
-                </div>
-                <!-- item end -->
-
-            </div>
-            <!-- main-col end -->
-
-        </div>
-        <!-- End Education -->
-
-
-
-    </section>
-    <!-- Resume Section End-->
-
-
-    <!-- Portfolio Section
-   ================================================== -->
-    <section id="portfolio">
-
-        <div class="row">
-
-            <div class="twelve columns collapsed">
-
-                <h1>Some of my projects</h1>
-
-                <!-- portfolio-wrapper -->
-                <div id="portfolio-wrapper" class="bgrid-thirds s-bgrid-thirds cf">
-
-                    <div class="columns portfolio-item">
-                        <div class="item-wrap">
-
-                            <a href="#modal-01" title="">
-                                <img alt="" src="images/portfolio/pebble.png">
-                                <div class="overlay">
-                                    <div class="portfolio-item-meta">
-                                        <h5>Pebble Text Talk</h5>
-                                        <p>Smart Watch App</p>
-                                    </div>
-                                </div>
-                                <div class="link-icon">
-                                    <i class="icon-plus"></i>
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-                    <!-- item end -->
-
-                    <div class="columns portfolio-item">
-                        <div class="item-wrap">
-
-                            <a href="#modal-02" title="">
-                                <img alt="" src="images/portfolio/decoder.png">
-                                <div class="overlay">
-                                    <div class="portfolio-item-meta">
-                                        <h5>4x16 Eagle CAD Binary Console</h5>
-                                        <p>Custom Arduino PCB</p>
-                                    </div>
-                                </div>
-                                <div class="link-icon">
-                                    <i class="icon-plus"></i>
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-                    <!-- item end -->
-
-                    <div class="columns portfolio-item">
-                        <div class="item-wrap">
-
-                            <a href="#modal-03" title="">
-                                <img alt="" src="images/portfolio/gamersNetwork.png">
-                                <div class="overlay">
-                                    <div class="portfolio-item-meta">
-                                        <h5>Gamers Network</h5>
-                                        <p>Web App</p>
-                                    </div>
-                                </div>
-                                <div class="link-icon">
-                                    <i class="icon-plus"></i>
-                                </div>
-                            </a>
-
-                        </div>
-                    </div>
-                    <!-- item end -->
-
-
-                </div>
-                <!-- portfolio-wrapper end -->
-
-            </div>
-            <!-- twelve columns end -->
-
-
-            <!-- Modal Popup
-	      --------------------------------------------------------------- -->
-
-            <div id="modal-01" class="popup-modal mfp-hide">
-
-                <img class="popupPic" src="images/portfolio/pebble.png" alt="" />
-
-                <div class="description-box">
-                    <h4>Pebble Text Talk</h4>
-                    <p>A smart watch app that helps people with hearing impairments. Utilizing microphone and screen features,
-                        TextTalk helps you follow a conversation by displaying spoken words for you to read in case you missed
-                        them.</p>
-                    <span class="categories">
-                        <i class="fa fa-tag"></i>Smart Watch App</span>
-                </div>
-
-                <div class="link-box">
-                    <a style="margin-right: 25px" href="https://devpost.com/software/pebble-texttalk">Dev Post</a>
-                    <a href="https://github.com/YanickHoude/PebbleApp">Github</a>
-                    <a class="popup-modal-dismiss">Close</a>
-                </div>
-
-            </div>
-            <!-- modal-01 End -->
-
-            <div id="modal-02" class="popup-modal mfp-hide">
-
-                <img class="popupPic" src="images/portfolio/decoder.png" alt="" />
-
-                <div class="description-box">
-                    <h4>4x16 Eagle CAD Binary Decoder</h4>
-                    <p>This Arduino program lets you initialize a 4x4 Keypad, and control its outputs through a 4x16 binary
-                        decoder designed in Eagle Cad.</p>
-                    <span class="categories">
-                        <i class="fa fa-tag"></i>Ardunio Custom PCB (Printed Circuit Board)</span>
-                </div>
-
-                <div class="link-box">
-                    <a href="https://github.com/jraw96/ArduinoKey2BinaryOutput">Github</a>
-                    <a class="popup-modal-dismiss">Close</a>
-                </div>
-
-            </div>
-            <!-- modal-02 End -->
-
-            <div id="modal-03" class="popup-modal mfp-hide">
-
-                <img class="popupPic" src="images/portfolio/gamersNetwork.png" alt="" />
-
-                <div class="description-box">
-                    <h4>Gamers Network</h4>
-                    <p>Whether you're an accomplished pro gamer or aspiring new player, get your ESports profile online and
-                        searchable through this MEAN stack web app.</p>
-                    <span class="categories">
-                        <i class="fa fa-tag"></i>Web App</span>
-                </div>
-
-                <div class="link-box">
-                    <a href="https://github.com/jraw96/-Gamer-sNetwork---MEAN-Stack-web-app">Github</a>
-                    <a class="popup-modal-dismiss">Close</a>
-                </div>
-
-            </div>
-            <!-- modal-03 End -->
-
-        </div>
-        <!-- row End -->
-
-    </section>
-    <!-- Portfolio Section End-->
-
-
-
-    <!-- footer
-   ================================================== -->
-    <footer>
-
-        <div class="row">
-
-            <div class="twelve columns">
-
-                <ul class="social-links">
-                    <li>
-                        <a href="https://www.facebook.com/profile.php?id=100004082899161">
-                            <i class="fa fa-facebook"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/jake-raw-a3950b107/">
-                            <i class="fa fa-linkedin"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/jraw96">
-                            <i class="fa fa-github"></i>
-                        </a>
-                    </li>
-                    <li style="opacity:0.5">|</li>
-                    <li style="font-size: 20px; color: white">
-                        <span style="margin-top: -3px;display: inline-block; vertical-align: top">jtraw96@gmail.com</span>
-                        </jtraw96>
-                    </li>
-                </ul>
-
-                <ul class="copyright">
-                    <li>&copy; Copyright 2018 CeeVee</li>
-                    <li>Design with resources from
-                        <a title="Styleshout" href="http://www.styleshout.com/">Styleshout</a>
-                    </li>
-                </ul>
-
-            </div>
-
-            <div id="go-top">
-                <a class="smoothscroll" title="Back to Top" href="#home">
-                    <i class="icon-up-open"></i>
-                </a>
-            </div>
-
-        </div>
-
-    </footer>
-    <!-- Footer End-->
-
-    <!-- Java Script
-   ================================================== -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
-    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
-
-    <script src="js/jquery.flexslider.js"></script>
-    <script src="js/waypoints.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/magnific-popup.js"></script>
-    <script src="js/init.js"></script>
 
+						<div class="media-body fade-in">
+							<div class="personal_text">
+								<h3> Vietnam 2019 </h3>
+
+								<p>
+									In May, 2019, three of my close friends and I travelled to Vietnam for four weeks. <br><br> 
+								</p>
+								<p>We visited the following places:</p>
+								<p>1. Hanoi</p>
+								<p>2. Ninh Binh</p>
+								<p>3. Ha Long Bay</p>
+								<p>4. Ha Giang (favourite)</p>
+								<p>5. Phong Nha</p>
+								<p>6. Hue</p>
+								<p>7. Hoi An</p>
+								<p>8. Saigon</p>
+
+								<br>
+								<p>We learned to motorcycle and loved the food.</p>
+								<p>Below are a few of my favourite photos. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container box_1620 work-cards" style="margin-top: 20px">
+			<div class=" fade-in">
+
+				<main>
+					<h2>Hanoi</h2>
+					<div class="hes-gallery">
+						<img src="vietnam/hanoi7.jpg" alt="image1" data-fullsize="vietnam/hanoi7.jpg"
+							data-subtext='Hanoi'>
+						<img src="vietnam/hanoi9.jpg" alt="image1" data-fullsize="vietnam/hanoi9.jpg"
+							data-subtext='Hanoi'>
+						<img src="vietnam/hanoi10.jpg" alt="image1" data-fullsize="vietnam/hanoi10.jpg"
+							data-subtext='Hanoi'>
+						<img src="vietnam/hanoi11.jpg" alt="image1" data-fullsize="vietnam/hanoi11.jpg"
+							data-subtext='Hanoi'>
+
+
+						<img src="vietnam/hanoi3.jpg" alt="image1" data-fullsize="vietnam/hanoi3.jpg"
+							data-subtext='Hanoi'>
+						<img src="vietnam/hanoi4.jpg" alt="image1" data-fullsize="vietnam/hanoi4.jpg"
+							data-subtext='Hanoi'>
+						<img src="vietnam/hanoi5.jpg" alt="image1" data-fullsize="vietnam/hanoi5.jpg"
+							data-subtext='Hanoi'>
+						<img src="vietnam/hanoi8.jpg" alt="image1" data-fullsize="vietnam/hanoi8.jpg"
+							data-subtext='Hanoi'>
+					</div>
+
+					<h2 style="margin-top: 30px;">Ninh Binh</h2>
+					<div class="hes-gallery">
+						<img src="vietnam/ninbin1.jpg" alt="image1" data-fullsize="vietnam/ninbin1.jpg"
+							data-subtext='Ninh Binh'>
+						<img src="vietnam/ninbin2.jpg" alt="image1" data-fullsize="vietnam/ninbin2.jpg"
+							data-subtext='Ninh Binh'>
+						<img src="vietnam/ninbin3.jpg" alt="image1" data-fullsize="vietnam/ninbin3.jpg"
+							data-subtext='Ninh Binh'>
+						<img src="vietnam/ninbin4.jpg" alt="image1" data-fullsize="vietnam/ninbin4.jpg"
+							data-subtext='Ninh Binh'>
+
+						<img src="vietnam/ninbin5.jpg" style='width: 411.5%;' alt="image1"
+							data-fullsize="vietnam/ninbin5.jpg" data-subtext='Ninh Binh'>
+
+
+					</div>
+
+					<h2 style="margin-top: 30px;">Ha Long Bay</h2>
+					<div class="hes-gallery">
+						<img src="vietnam/halong11.jpg" alt="image1" data-fullsize="vietnam/halong11.jpg"
+							data-subtext='Ha Long Bay'>
+						<img src="vietnam/halong2.jpg" alt="image1" data-fullsize="vietnam/halong2.jpg"
+							data-subtext='Ha Long Bay'>
+						<img src="vietnam/halong4.jpg" alt="image1" data-fullsize="vietnam/halong4.jpg"
+							data-subtext='Ha Long Bay'>
+						<img src="vietnam/halong9.jpg" alt="image1" data-fullsize="vietnam/halong9.jpg"
+							data-subtext='Ha Long Bay'>
+
+						<img src="vietnam/halong5.jpg" alt="image1" data-fullsize="vietnam/halong5.jpg"
+							data-subtext='Ha Long Bay'>
+						<img src="vietnam/halong7.jpg" alt="image1" data-fullsize="vietnam/halong7.jpg"
+							data-subtext='Ha Long Bay'>
+						<img src="vietnam/halong8.jpg" alt="image1" data-fullsize="vietnam/halong8.jpg"
+							data-subtext='Ha Long Bay'>
+						<img src="vietnam/halong10.jpg" alt="image1" data-fullsize="vietnam/halong10.jpg"
+							data-subtext='Ha Long Bay'>
+
+					</div>
+
+					<h2 style="margin-top: 30px;">Ha Giang</h2>
+					<div class="hes-gallery">
+						<img src="vietnam/hagiang1.jpg" alt="image1" data-fullsize="vietnam/hagiang1.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang2.jpg" alt="image1" data-fullsize="vietnam/hagiang2.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang3.jpg" alt="image1" data-fullsize="vietnam/hagiang3.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang37.jpg" alt="image1" data-fullsize="vietnam/hagiang37.jpg"
+							data-subtext='Hagiang'>
+
+						<img src="vietnam/hagiang6.jpg" alt="image1" data-fullsize="vietnam/hagiang6.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang7.jpg" alt="image1" data-fullsize="vietnam/hagiang7.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang8.jpg" alt="image1" data-fullsize="vietnam/hagiang8.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang10.jpg" alt="image1" data-fullsize="vietnam/hagiang10.jpg"
+							data-subtext='Hagiang'>
+
+						<img src="vietnam/hagiang39.jpg" alt="image1" data-fullsize="vietnam/hagiang39.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang12.jpg" alt="image1" data-fullsize="vietnam/hagiang12.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang15.jpg" alt="image1" data-fullsize="vietnam/hagiang15.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang18.jpg" alt="image1" data-fullsize="vietnam/hagiang18.jpg"
+							data-subtext='Hagiang'>
+
+						<!-- Panarama -->
+						<img src="vietnam/hagiang16.jpg" style='width: 411.5%;' alt="image1"
+							data-fullsize="vietnam/hagiang16.jpg" data-subtext='Hagiang'>
+						<img src="vietnam/hagiang16.jpg" style="opacity: 0" alt="image1"
+							data-fullsize="vietnam/hagiang16.jpg" data-subtext='Hagiang'>
+						<img src="vietnam/hagiang16.jpg" style="opacity: 0" alt="image1"
+							data-fullsize="vietnam/hagiang16.jpg" data-subtext='Hagiang'>
+						<img src="vietnam/hagiang16.jpg" style="opacity: 0" alt="image1"
+							data-fullsize="vietnam/hagiang16.jpg" data-subtext='Hagiang'>
+
+						<img src="vietnam/hagiang14.jpg" alt="image1" data-fullsize="vietnam/hagiang14.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang17.jpg" alt="image1" data-fullsize="vietnam/hagiang17.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang38.jpg" alt="image1" data-fullsize="vietnam/hagiang38.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang9.jpg" alt="image1" data-fullsize="vietnam/hagiang9.jpg"
+							data-subtext='Hagiang'>
+
+
+						<!-- Panarama -->
+						<img src="vietnam/hagiang13.jpg" style='width: 411.5%;' alt="image1"
+							data-fullsize="vietnam/hagiang13.jpg" data-subtext='Hagiang'>
+						<img src="vietnam/hagiang13.jpg" style="opacity: 0" alt="image1"
+							data-fullsize="vietnam/hagiang13.jpg" data-subtext='Hagiang'>
+						<img src="vietnam/hagiang13.jpg" style="opacity: 0" alt="image1"
+							data-fullsize="vietnam/hagiang13.jpg" data-subtext='Hagiang'>
+						<img src="vietnam/hagiang13.jpg" style="opacity: 0" alt="image1"
+							data-fullsize="vietnam/hagiang13.jpg" data-subtext='Hagiang'>
+
+
+						<img src="vietnam/hagiang19.jpg" alt="image1" data-fullsize="vietnam/hagiang19.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang20.jpg" alt="image1" data-fullsize="vietnam/hagiang20.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang50.jpg" alt="image1" data-fullsize="vietnam/hagiang50.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang22.jpg" alt="image1" data-fullsize="vietnam/hagiang22.jpg"
+							data-subtext='Hagiang'>
+
+						<img src="vietnam/hagiang24.jpg" alt="image1" data-fullsize="vietnam/hagiang24.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang25.jpg" alt="image1" data-fullsize="vietnam/hagiang25.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang26.jpg" alt="image1" data-fullsize="vietnam/hagiang26.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang27.jpg" alt="image1" data-fullsize="vietnam/hagiang27.jpg"
+							data-subtext='Hagiang'>
+
+						<!-- Panarama -->
+						<img src="vietnam/hagiang23.jpg" style='width: 411.5%;' alt="image1"
+							data-fullsize="vietnam/hagiang23.jpg" data-subtext='Hagiang'>
+						<img src="vietnam/hagiang23.jpg" style="opacity: 0" alt="image1"
+							data-fullsize="vietnam/hagiang23.jpg" data-subtext='Hagiang'>
+						<img src="vietnam/hagiang23.jpg" style="opacity: 0" alt="image1"
+							data-fullsize="vietnam/hagiang23.jpg" data-subtext='Hagiang'>
+						<img src="vietnam/hagiang23.jpg" style="opacity: 0" alt="image1"
+							data-fullsize="vietnam/hagiang23.jpg" data-subtext='Hagiang'>
+
+						<img src="vietnam/hagiang28.jpg" alt="image1" data-fullsize="vietnam/hagiang28.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang30.jpg" alt="image1" data-fullsize="vietnam/hagiang30.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang40.jpg" alt="image1" data-fullsize="vietnam/hagiang40.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang29.jpg" alt="image1" data-fullsize="vietnam/hagiang29.jpg"
+							data-subtext='Hagiang'>
+
+						<img src="vietnam/hagiang32.jpg" alt="image1" data-fullsize="vietnam/hagiang32.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang33.jpg" alt="image1" data-fullsize="vietnam/hagiang33.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang31.jpg" alt="image1" data-fullsize="vietnam/hagiang31.jpg"
+							data-subtext='Hagiang'>
+						<img src="vietnam/hagiang34.jpg" alt="image1" data-fullsize="vietnam/hagiang34.jpg"
+							data-subtext='Hagiang'>
+					</div>
+
+					<h2 style="margin-top: 30px;">Phong Nha</h2>
+					<div class="hes-gallery">
+						<img src="vietnam/phongna1.jpg" alt="image1" data-fullsize="vietnam/phongna1.jpg"
+							data-subtext='Phong Nha'>
+						<img src="vietnam/phongna2.jpg" alt="image1" data-fullsize="vietnam/phongna2.jpg"
+							data-subtext='Phong Nha'>
+						<img src="vietnam/phongna4.jpg" alt="image1" data-fullsize="vietnam/phongna4.jpg"
+							data-subtext='Phong Nha'>
+						<img src="vietnam/phongna3.jpg" alt="image1" data-fullsize="vietnam/phongna3.jpg"
+							data-subtext='Phong Nha'>
+
+
+					</div>
+
+					<h2 style="margin-top: 30px;">Hue</h2>
+					<div class="hes-gallery">
+						<img src="vietnam/hue1.jpg" alt="image1" data-fullsize="vietnam/hue1.jpg" data-subtext='Hue'>
+						<img src="vietnam/hue2.jpg" alt="image1" data-fullsize="vietnam/hue2.jpg" data-subtext='Hue'>
+						<img src="vietnam/hue4.jpg" alt="image1" data-fullsize="vietnam/hue4.jpg" data-subtext='Hue'>
+						<img src="vietnam/hue5.jpg" alt="image1" data-fullsize="vietnam/hue5.jpg" data-subtext='Hue'>
+					</div>
+
+					<h2 style="margin-top: 30px;">The Hai Van Pass - Hue to Hoi An</h2>
+					<div class="hes-gallery">
+						<img src="vietnam/hue6.jpg" alt="image1" data-fullsize="vietnam/hue6.jpg" data-subtext='Hue'>
+						<img src="vietnam/hue7.jpg" alt="image1" data-fullsize="vietnam/hue7.jpg" data-subtext='Hue'>
+						<img src="vietnam/hue8.jpg" alt="image1" data-fullsize="vietnam/hue8.jpg" data-subtext='Hue'>
+						<img src="vietnam/hue10.jpg" alt="image1" data-fullsize="vietnam/hue10.jpg" data-subtext='Hue'>
+
+						<img src="vietnam/hue12.jpg" alt="image1" data-fullsize="vietnam/hue12.jpg" data-subtext='Hue'>
+						<img src="vietnam/hue14.jpg" alt="image1" data-fullsize="vietnam/hue14.jpg" data-subtext='Hue'>
+						<img src="vietnam/hue15.jpg" alt="image1" data-fullsize="vietnam/hue15.jpg" data-subtext='Hue'>
+						<img src="vietnam/hue16.jpg" alt="image1" data-fullsize="vietnam/hue16.jpg" data-subtext='Hue'>
+					</div>
+
+					<h2 style="margin-top: 30px;">Hoi An</h2>
+					<div class="hes-gallery">
+						<img src="vietnam/hoian1.jpg" alt="image1" data-fullsize="vietnam/hoian1.jpg"
+							data-subtext='Hoi An'>
+						<img src="vietnam/hoian2.jpg" alt="image1" data-fullsize="vietnam/hoian2.jpg"
+							data-subtext='Hoi An'>
+						<img src="vietnam/hoian6.jpg" alt="image1" data-fullsize="vietnam/hoian6.jpg"
+							data-subtext='Hoi An'>
+						<img src="vietnam/hoian5.jpg" alt="image1" data-fullsize="vietnam/hoian5.jpg"
+							data-subtext='Hoi An'>
+
+						<img src="vietnam/hoian9.jpg" alt="image1" data-fullsize="vietnam/hoian9.jpg"
+							data-subtext='Hoi An'>
+						<img src="vietnam/hoian10.jpg" alt="image1" data-fullsize="vietnam/hoian10.jpg"
+							data-subtext='Hoi An'>
+						<img src="vietnam/hoian14.jpg" alt="image1" data-fullsize="vietnam/hoian14.jpg"
+							data-subtext='Hoi An'>
+						<img src="vietnam/hoian15.jpg" alt="image1" data-fullsize="vietnam/hoian15.jpg"
+							data-subtext='Hoi An'>
+
+						<img src="vietnam/hoian11.jpg" alt="image1" data-fullsize="vietnam/hoian11.jpg"
+							data-subtext='Hoi An'>
+						<img src="vietnam/hoian13.jpg" alt="image1" data-fullsize="vietnam/hoian13.jpg"
+							data-subtext='Hoi An'>
+						<img src="vietnam/hoian12.jpg" alt="image1" data-fullsize="vietnam/hoian12.jpg"
+							data-subtext='Hoi An'>
+						<img src="vietnam/hoian16.jpg" alt="image1" data-fullsize="vietnam/hoian16.jpg"
+							data-subtext='Hoi An'>
+
+
+
+					</div>
+
+					<h2 style="margin-top: 30px;">Saigon</h2>
+					<div class="hes-gallery">
+						<img src="vietnam/saigon5.jpg" alt="image1" data-fullsize="vietnam/saigon5.jpg"
+							data-subtext='Saigon'>
+						<img src="vietnam/saigon4.jpg" alt="image1" data-fullsize="vietnam/saigon4.jpg"
+							data-subtext='Saigon'>
+						<div style="overflow: hidden">
+							<img src="vietnam/saigon2.jpg" style="width: 133.5%; margin-left: -12%;" alt="image1"
+								data-fullsize="vietnam/saigon2.jpg" data-subtext='Saigon'>
+						</div>
+						<img src="vietnam/saigon3.jpg" alt="image1" data-fullsize="vietnam/saigon3.jpg"
+							data-subtext='Saigon'>
+
+
+
+					</div>
+
+				</main>
+			</div>
+		</div>
+	</section>
+
+	<!--================ Travel Area =================-->
+	<section class="home_banner_area page-load " id="france">
+		<div class="container box_1620">
+			<div class="banner_inner d-flex align-items-center">
+				<div class="banner_content">
+					<div class="media">
+
+
+							<div class="flex-column">
+									<img style="max-width: 95%; margin-right: 4%" src="franceJourney.png" alt="">
+	
+	<div>
+		<p style="text-align: center; color: #777777">Google Maps of locations visited, starting and ending in Paris</p>
+	</div>
+							</div>
+
+
+						<div class="media-body fade-in">
+							<div class="personal_text">
+								<h3> France 2019 </h3>
+
+								
+								
+								<p>In July, 2019, my mom and I travelled throughout France.  </p>
+
+				
+								</p>
+								<br>
+								<p>We visted the following places:</p>
+								<p>1. Paris</p>
+								<p>2. Annecy</p>
+								<p>3. Nice</p>
+								<p>4. Saint-Tropez</p>
+								<p>5. Monaco</p>
+								<p>6. Bordeaux</p>
+								<p>7. Saint-Emillion (favourite)</p>
+								<br>
+								<p>We enjoyed delicious meals and croissants.</p>
+								<p>Below are a few of my favourite photos. </p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container box_1620 work-cards" style="margin-top: 20px">
+			<div class=" fade-in">
+
+				<main>
+					<h2>Paris</h2>
+					<div class="hes-gallery">
+						<img src="france/paris1.jpg" alt="image1" data-fullsize="france/paris1.jpg"
+							data-subtext='Paris'>
+						<img src="france/paris2.jpg" alt="image1" data-fullsize="france/paris2.jpg"
+							data-subtext='Paris'>
+						<img src="france/paris9.jpg" alt="image1" data-fullsize="france/paris9.jpg"
+							data-subtext='Paris'>
+						<img src="france/paris6.jpg" alt="image1" data-fullsize="france/paris6.jpg"
+							data-subtext='Paris'>
+
+						<img src="france/paris5.jpg" alt="image1" data-fullsize="france/paris5.jpg"
+							data-subtext='Paris'>
+						<img src="france/paris12.jpg" alt="image1" data-fullsize="france/paris12.jpg"
+							data-subtext='Paris'>
+						<img src="france/paris15.jpg" alt="image1" data-fullsize="france/paris15.jpg"
+							data-subtext='Paris'>
+						<img src="france/paris14.jpg" alt="image1" data-fullsize="france/paris14.jpg"
+							data-subtext='Paris'>
+
+						<img src="france/paris13.jpg" alt="image1" data-fullsize="france/paris13.jpg"
+							data-subtext='Paris'>
+						<img src="france/paris10.jpg" alt="image1" data-fullsize="france/paris10.jpg"
+							data-subtext='Paris'>
+						<img src="france/paris11.jpg" alt="image1" data-fullsize="france/paris11.jpg"
+							data-subtext='Paris'>
+						<img src="france/paris8.jpg" alt="image1" data-fullsize="france/paris8.jpg"
+							data-subtext='Paris'>
+
+					</div>
+
+					<h2 style="margin-top: 30px;">Annecy</h2>
+					<div class="hes-gallery">
+						<img src="france/annecy10.jpg" alt="image1" data-fullsize="france/annecy10.jpg"
+							data-subtext='Annecy'>
+						<img src="france/annecy3.jpg" alt="image1" data-fullsize="france/annecy3.jpg"
+							data-subtext='Annecy'>
+						<img src="france/annecy6.jpg" alt="image1" data-fullsize="france/annecy6.jpg"
+							data-subtext='Annecy'>
+						<img src="france/annecy8.jpg" alt="image1" data-fullsize="france/annecy8.jpg"
+							data-subtext='Annecy'>
+						<img src="france/annecy5.jpg" style='width: 178%;' alt="image1"
+							data-fullsize="france/annecy5.jpg" data-subtext='Annecy'>
+						<img src="france/annecy5.jpg" style='opacity: 0;' alt="image1"
+							data-fullsize="france/annecy5.jpg" data-subtext='Annecy'>
+						<img src="france/annecy7.jpg" style="margin-left: -12%" alt="image1"
+							data-fullsize="france/annecy7.jpg" data-subtext='Annecy'>
+						<img src="france/annecy4.jpg" alt="image1" data-fullsize="france/annecy4.jpg"
+							data-subtext='Annecy'>
+						<img src="france/annecy9.jpg" style="width: 411.5% !important;" alt="image1"
+							data-fullsize="france/annecy9.jpg" data-subtext='Annecy'>
+
+
+					</div>
+
+					<h2 style="margin-top: 30px;">Nice</h2>
+					<div class="hes-gallery">
+						<div style="overflow: hidden">
+							<img style="width: 112.5%; margin-left: -10%" src="france/nice4.jpg" alt="image1"
+								data-fullsize="france/nice4.jpg" data-subtext='Nice'>
+						</div>
+						<div style="overflow: hidden">
+							<img style="width: 112.5%; margin-left: -10%" src="france/nice3.jpg" alt="image1"
+								data-fullsize="france/nice3.jpg" data-subtext='Nice'>
+						</div>
+						<img src="france/nice6.jpg" alt="image3" data-fullsize="france/nice6.jpg" data-subtext="Nice">
+						<img src="france/nice5.jpg" alt="image2" data-fullsize="france/nice5.jpg" data-subtext="Nice">
+
+
+						<img src="france/nice7.jpg" style="width: 411.5% !important;" alt="image3"
+							data-fullsize="france/nice7.jpg" data-subtext="Nice">
+					</div>
+
+					<h2 style="margin-top: 30px;">Saint-Tropez</h2>
+					<div class="hes-gallery">
+
+						<img src="france/tropez2.jpg" style='width: 203.75%;' alt="image1"
+							data-fullsize="france/tropez2.jpg" data-subtext='Saint-Tropez'>
+						<img src="france/tropez2.jpg" style='opacity: 0;' alt="image1"
+							data-fullsize="france/tropez2.jpg" data-subtext='Saint-Tropez'>
+						<div style="overflow: hidden">
+							<img src="france/tropez7.jpg" style="width:102%" alt="image1"
+								data-fullsize="france/tropez7.jpg" data-subtext='Saint-Tropez'>
+						</div>
+						<div style="overflow: hidden">
+							<img src="france/tropez8.jpg" style="width:102%" alt="image1"
+								data-fullsize="france/tropez8.jpg" data-subtext='Saint-Tropez'>
+						</div>
+
+
+						<div style="overflow: hidden">
+							<img src="france/tropez1.jpg" style="width:102%" alt="image1"
+								data-fullsize="france/tropez1.jpg" data-subtext='Saint-Tropez'>
+						</div>
+						<div style="overflow: hidden">
+							<img src="france/tropez3.jpg" style="width:102%" alt="image1"
+								data-fullsize="france/tropez3.jpg" data-subtext='Saint-Tropez'>
+						</div>
+						<img src="france/tropez6.jpg" style='width: 203.75%;' alt="image1"
+							data-fullsize="france/tropez6.jpg" data-subtext='Saint-Tropez'>
+						<img src="france/tropez6.jpg" style='opacity: 0;' alt="image1"
+							data-fullsize="france/tropez6.jpg" data-subtext='Saint-Tropez'>
+
+
+					</div>
+
+					<h2 style="margin-top: 30px;">Monaco</h2>
+					<div class="hes-gallery">
+						<img src="france/monaco1.jpg" alt="image1" data-fullsize="france/monaco1.jpg"
+							data-subtext='Monaco'>
+						<img src="france/monaco2.jpg" alt="image1" data-fullsize="france/monaco2.jpg"
+							data-subtext='Monaco'>
+						<img src="france/monaco5.jpg" alt="image1" data-fullsize="france/monaco5.jpg"
+							data-subtext='Monaco'>
+						<div style="    overflow: hidden;
+						max-width: 100%;
+						max-height: 89%;">
+							<img src="france/monaco6.jpg" alt="image1" data-fullsize="france/monaco6.jpg"
+								data-subtext='Monaco'>
+						</div>
+						<img src="france/monaco3.jpg" style="width: 411.5% !important; margin-top: -8.5%;" alt="image1"
+							data-fullsize="france/monaco3.jpg" data-subtext='Monaco'>
+
+					</div>
+
+					<h2 style="margin-top: 30px;">Bordeaux</h2>
+					<div class="hes-gallery">
+						<div style="overflow: hidden">
+							<img src="france/bordeaux1.jpg" style="width: 112.5%; margin-left: -10%" alt="image1"
+								data-fullsize="france/bordeaux1.jpg" data-subtext='Bordeaux'>
+						</div>
+						<img src="france/bordeaux6.jpg" alt="image1" data-fullsize="france/bordeaux6.jpg"
+							data-subtext='Bordeaux'>
+
+						<img src="france/bordeaux5.jpg" alt="image1" data-fullsize="france/bordeaux5.jpg"
+							data-subtext='Bordeaux'>
+						<img src="france/bordeaux4.jpg" alt="image1" data-fullsize="france/bordeaux4.jpg"
+							data-subtext='Bordeaux'>
+						<img src="france/bordeaux3.jpg" style="width: 411.5% !important" alt="image1"
+							data-fullsize="france/bordeaux3.jpg" data-subtext='Bordeaux'>
+
+					</div>
+
+					<h2 style="margin-top: 30px;">Saint-Emillion</h2>
+					<div class="hes-gallery">
+						<img src="france/emillion1.jpg" alt="image1" data-fullsize="france/emillion1.jpg"
+							data-subtext='Saint-Emillion'>
+						<img src="france/emillion8.jpg" alt="image1" data-fullsize="france/emillion8.jpg"
+							data-subtext='Saint-Emillion'>
+						<img src="france/emillion12.jpg" alt="image1" data-fullsize="france/emillion12.jpg"
+							data-subtext='Saint-Emillion'>
+						<img src="france/emillion9.jpg" alt="image1" data-fullsize="france/emillion9.jpg"
+							data-subtext='Saint-Emillion'>
+
+						<img src="france/emillion2.jpg" alt="image1" data-fullsize="france/emillion2.jpg"
+							data-subtext='Saint-Emillion'>
+						<img src="france/emillion3.jpg" alt="image1" data-fullsize="france/emillion3.jpg"
+							data-subtext='Saint-Emillion'>
+						<img src="france/emillion10.jpg" alt="image1" data-fullsize="france/emillion10.jpg"
+							data-subtext='Saint-Emillion'>
+						<img src="france/emillion11.jpg" alt="image1" data-fullsize="france/emillion11.jpg"
+							data-subtext='Saint-Emillion'>
+
+						<img src="france/emillion5.jpg" style="width: 411.5% !important" alt="image1"
+							data-fullsize="france/emillion5.jpg" data-subtext='Saint-Emillion'>
+
+
+
+
+					</div>
+
+				</main>
+			</div>
+		</div>
+	</section>
+
+
+	<!--================ About Area =================-->
+	<section class="home_banner_area page-load  " id="books">
+		<div class="container box_1620">
+			<div class="banner_inner d-flex align-items-center">
+
+				<div>
+					<p>
+					
+							In 2017 I discovered <a target="_blank" href="https://en.wikipedia.org/wiki/1001_Books_You_Must_Read_Before_You_Die"> 1001 Books You Must Read Before You Die,</a>
+							and have read eighteen of these so far. Below are three of my favourites.
+		
+			</p>
+					</div>
+			</div>
+		</div>
+
+		<div class="container box_1620 fade-in" style="margin-top: 24px; margin-bottom: 24px">
+			<h3 style="    margin-bottom: 16px;">Top 3 Books</h3>
+
+			<div class="banner_inner d-flex align-items-center">
+				<div class="flex-books">
+					<div class="flex-top-3 ">
+						<h4>The Count of Monte Christo</h4>
+						<img class="top-book" src="books/montechristo.jpg">
+					</div>
+					<div class="flex-top-3 ">
+						<h4>Anna Karenina</h4>
+						<img class="top-book" src="books/karenina.jpg">
+					</div>
+					<div class="flex-top-3 ">
+						<h4>The Three Muskateers</h4>
+						<img class="top-book" src="books/muskateers.jpg">
+					</div>
+				</div>
+			</div>
+			<hr>
+			<h5>1. The Count of Monte Christo</h5>
+			<b>Author: </b> Alexandre Dumas
+			<br>
+			<b>Pages: </b> 1427
+			<br>
+			<b>Read: </b>2017
+			<br>
+			<b>Favourite passage: </b>
+			<i>“By degrees the sun disappeared behind the western horizon; but as though to prove truth of fanciful
+				ideas in heathen
+				mythology, it’s indiscreet rays reappeared on the summit of each wave, seeming to reveal that the god of
+				fire had just
+				enfolded himself in the bosom of Amphitrite, who in vain endeavored to hide her lover beneath her azure
+				mantle.”
+			</i>
+
+
+			<hr>
+			<h5>2. Anna Karenina</h5>
+			<b>Author: </b> Leo Tolstoy
+			<br>
+			<b>Pages: </b> 864
+			<br>
+			<b>Read: </b>2018
+			<br>
+			<b>Favourite passage: </b>
+			<i>“He stepped down, trying not to look long at her, as if she were the sun, yet he saw her, like the sun,
+				even without looking.”
+			</i>
+
+			<hr>
+			<h5>3. The Three Muskateers</h5>
+			<b>Author: </b> Alexandre Dumas
+			<br>
+			<b>Pages: </b> 598
+			<br>
+			<b>Read: </b>2019
+			<br>
+			<b>Favourite passage: </b>
+			<i>“In her body and her heart, passion succeeded passion, consuming her ever anew; her life took on the
+				color and movement
+				of clouds that float across the firmament, tinged now with azure, now with fire, and now with the
+				blackness of a tempest
+				which leaves in its wake no trace of aught but devastation and death."
+			</i>
+
+
+		</div>
+
+		<div class="container box_1620" style="margin-bottom: 24px">
+			<h3>Completed Books </h3>
+			<h4>
+				2019
+			</h4>
+			<div class="banner_inner d-flex align-items-center">
+				<div class="flex-books">
+					<div class="gallery">
+						<img src="./books/muskateers.jpg" width="600" height="400">
+						<div class="desc">The Three Muskateers</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2019/chesilBeach.jpg" width="600" height="400">
+						<div class="desc">On Chesil Beach</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2019/childreanAct.jpg" width="600" height="400">
+						<div class="desc">The Children Act</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2019/serfdom.jpg" width="600" height="400">
+						<div class="desc">The Road to Serfdom</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2019/amsterdam.jpeg" width="600" height="400">
+						<div class="desc">Amsterdam</div>
+					</div>
+					<div class="gallery">
+						<img src="./books/2019/enduringLove.jpeg" width="600" height="400">
+						<div class="desc">Enduring Love</div>
+					</div>
+					<div class="gallery">
+						<img src="./books/2019/econInOne.jpg" width="600" height="400">
+						<div class="desc">Economics in One Lesson</div>
+					</div>
+
+				</div>
+			</div>
+			<h4>
+				2018
+			</h4>
+			<div class="banner_inner d-flex align-items-center">
+				<div class="flex-books">
+					<div class="gallery">
+						<img src="./books/karenina.jpg" width="600" height="400">
+						<div class="desc">Anna Karenina</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2018/neverLetMeGo.jpg" width="600" height="400">
+						<div class="desc">Never Let Me Go</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2018/reader.jpg" width="600" height="400">
+						<div class="desc">The Reader</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2018/saturday.jpg" width="600" height="400">
+						<div class="desc">Saturday</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2018/geb.jpg" width="600" height="400">
+						<div class="desc">Gödel, Escher, Bach: an Eternal Golden Braid</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2018/hedgehog.jpg" width="600" height="400">
+						<div class="desc">The Elegance of the Hedgehog</div>
+					</div>
+
+				</div>
+			</div>
+			<h4>
+				2017
+			</h4>
+			<div class="banner_inner d-flex align-items-center">
+				<div class="flex-books">
+					<div class="gallery">
+						<img src="./books/montechristo.jpg" width="600" height="400">
+						<div class="desc">The Count of Monte Christo</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2017/atonement.jpg" width="600" height="400">
+						<div class="desc">Atonement</div>
+					</div>
+
+
+					<div class="gallery">
+						<img src="./books/2017/nutshell.jpg" width="600" height="400">
+						<div class="desc">Nutshell</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2017/dune.jpg" width="600" height="400">
+						<div class="desc">Dune</div>
+					</div>
+
+
+					<div class="gallery">
+						<img src="./books/2017/road.jpg" width="600" height="400">
+						<div class="desc">The Road</div>
+					</div>
+					<div class="gallery">
+						<img src="./books/2017/atlas.jpg" width="600" height="400">
+						<div class="desc">Atlas Shrugged</div>
+					</div>
+
+				</div>
+			</div>
+
+			<h4>
+				2014
+			</h4>
+			<div class="banner_inner d-flex align-items-center">
+				<div class="flex-books">
+					<div class="gallery">
+						<img src="./books/2014/got1.jpg" width="600" height="400">
+						<div class="desc">A Game of Thrones</div>
+					</div>
+					<div class="gallery">
+						<img src="./books/2014/got2.jpg" width="600" height="400">
+						<div class="desc">A Clash of Kings</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2014/got3.jpg" width="600" height="400">
+						<div class="desc">A Storm of Swords</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2014/got4.jpg" width="600" height="400">
+						<div class="desc">A Feast for Crows</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2014/got5.jpg" width="600" height="400">
+						<div class="desc">A Dance of Dragons</div>
+					</div>
+
+
+				</div>
+			</div>
+			<h4>
+				2013
+			</h4>
+			<div class="banner_inner d-flex align-items-center">
+				<div class="flex-books">
+					<div class="gallery">
+						<img src="./books/2013/hobbit.jpg" width="600" height="400">
+						<div class="desc">The Hobbit</div>
+					</div>
+
+					<div class="gallery">
+						<img src="./books/2013/lotr1.jpg" width="600" height="400">
+						<div class="desc">The Fellowship of the Rings</div>
+					</div>
+					<div class="gallery">
+						<img src="./books/2013/lotr2.jpg" width="600" height="400">
+						<div class="desc">The Two Towers</div>
+					</div>
+					<div class="gallery">
+						<img src="./books/2013/lotr3.jpg" width="600" height="400">
+						<div class="desc">The Return of the King</div>
+					</div>
+
+
+
+				</div>
+			</div>
+
+		</div>
+
+
+
+	</section>
+
+
+
+
+
+	<!--================End Footer Area =================-->
+
+
+	<!-- 
+		<p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. 
+			Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+			 Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. </p> -->
+
+
+
+
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="vendors/lightbox/simpleLightbox.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="vendors/isotope/isotope.pkgd.min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="vendors/popup/jquery.magnific-popup.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="vendors/counter-up/jquery.waypoints.min.js"></script>
+	<script src="vendors/counter-up/jquery.counterup.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<script src="js/theme.js"></script>
+	<script src="js/main.js"></script>
+
+	<!-- <script src="../src/hes-gallery.js"></script> -->
+	<script src="album.js"></script>
+	<script>
+		HesGallery.setOptions({
+			disableScrolling: false,
+			hostedStyles: false,
+			animations: true,
+
+			showImageCount: true,
+			wrapAround: true
+		});
+	</script>
 </body>
 
 </html>
