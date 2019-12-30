@@ -34,30 +34,52 @@
 	<header class="header_area background-color">
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container box_1620">
+				<div class="container box_1620" style="    background-color: transparent;
+				float: right !important;
+				border-radius: 8px;">
+
+						<!-- Brand and toggle get grouped for better mobile display -->
+						<a class="navbar-brand logo_h" href="./index.html"></a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+
+
+
 					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+					<div class="collapse navbar-collapse offset" style="padding-left: 10px;
+					padding-right: 10px;" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav ml-auto">
 							<li class="nav-item">
-								<a class="nav-link" style="cursor: pointer" id="home-label"
+								<a class="nav-link" style="cursor: pointer" id="home-label" data-toggle="collapse" data-target=".navbar-collapse.show"
 									onclick="greyAllLables(); showSection('home')">Home</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" style="cursor: pointer" id="about-label"
+								<a class="nav-link" style="cursor: pointer" id="about-label" data-toggle="collapse" data-target=".navbar-collapse.show"
 									onclick=" greyAllLables(); showSection('about')">About</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" style="cursor: pointer; white-space: pre;" id="experience-label"
+								<a class="nav-link" style="cursor: pointer; white-space: pre;" id="experience-label" data-toggle="collapse" data-target=".navbar-collapse.show"
 									onclick="greyAllLables(); showSection('experience')">Experience</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" style="cursor: pointer" id="skills-label"
+								<a class="nav-link" style="cursor: pointer" id="skills-label" data-toggle="collapse" data-target=".navbar-collapse.show"
 									onclick="greyAllLables(); showSection('skills')">Skills</a>
 							</li>
-							<li class="nav-item">
+							<li class="nav-item nav-pipe">
 								<span class="nav-link"> | </span>
 							</li>
-							<li class="nav-item submenu dropdown">
+
+							<li class="nav-item submenu dropdown collapsed-travel">
+									<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" data-target=".navbar-collapse.show" role="button" aria-haspopup="true" aria-expanded="false">Travel</a>
+									<ul class="dropdown-menu">
+										<li class="nav-item"><a class="nav-link"  onclick="greyAllLables(); showSection('france')">France</a></li>
+										<li class="nav-item"><a class="nav-link" onclick="greyAllLables(); showSection('vietnam')" data-toggle="collapse">Vietnam</a></li>
+									</ul>
+								</li> 
+							<li class="nav-item submenu dropdown uncollapsed-travel">
 								
 								
 
@@ -65,33 +87,23 @@
 											<a href="#" style="cursor: default" class="nav-link dropdown-toggle" id="travel-label"
 									data-toggle="dropdown" role="button" aria-haspopup="true"
 									aria-expanded="false">Travel</a>
-											<div class="dropdown-content">
-											  <a href="#" onclick="greyAllLables(); showSection('france')">France 2019</a>
-											  <a href="#" onclick="greyAllLables(); showSection('vietnam')">Vietnam 2019</a>
-										
+											<div class="dropdown-content" >
+
+													<ul class="dropdown-menu">
+															<li class="nav-item"> <a href="#" onclick="greyAllLables(); showSection('france')" data-toggle="collapse">France 2019</a></li>
+															<li class="nav-item"><a href="#" onclick="greyAllLables(); showSection('vietnam')" data-toggle="collapse">Vietnam 2019</a></li>
+														</ul>
 											</div>
 										  </div>
-										  
-										  <!--
-								<ul class="dropdown-menu" style="margin: -10px 0px 0px -20px">
-									<li class="nav-item" style="cursor: pointer">
-										<a class="nav-link" onclick="greyAllLables(); showSection('vietnam')">Vietnam
-											2019</a>
-									</li>
-									<li class="nav-item" style="cursor: pointer">
-										<a class="nav-link" onclick="greyAllLables(); showSection('france')">France
-											2019</a>
-									</li>
-								</ul>
-							-->
-
-							
 							</li>
+				
+
+
 							<li class="nav-item">
-								<a class="nav-link" id="books-label" style="cursor: pointer"
+								<a class="nav-link" id="books-label" style="cursor: pointer" data-toggle="collapse" data-target=".navbar-collapse.show"
 									onclick="greyAllLables(); showSection('books')">Books</a>
 							</li>
-							<li class="nav-item">
+							<li class="nav-item  nav-pipe ">
 								<span class="nav-link"> | </span>
 							</li>
 							<li class="nav-item">
@@ -115,7 +127,7 @@
 				<div class="banner_content">
 					<div class="media">
 
-						<img style="max-width: 50%; margin-right: 4%" src="img/profile.jpg" alt="">
+						<img class="home-pic" style="margin-right: 4%" src="img/profile.jpg" alt="">
 
 						<div class="media-body fade-in">
 							<div class="personal_text">
@@ -201,14 +213,14 @@
 												I'm currently living in Toronto and have two favourite coffee shops:
 												<a target="_blank"  href='https://www.google.ca/maps/place/Dark+Horse+Espresso+Bar/@43.6506042,-79.3989859,17z/data=!3m1!4b1!4m5!3m4!1s0x882b34c4aa52e483:0x277af391d99e27ad!8m2!3d43.6506265!4d-79.3968412'>Dark Horse Espresso </a> and 
 												<a target="_blank" href="https://www.google.ca/maps/place/Jimmy's+Coffee/@43.6452788,-79.402452,17z/data=!3m1!4b1!4m5!3m4!1s0x882b35c277632b6d:0xcc874f7236d36dcc!8m2!3d43.6452788!4d-79.4002633">Jimmy's Coffee. </a> 
-												If you have any recommendations for new places to try, I'd 
+												If you have any recommendations for new coffe shops to try, I'd 
 												love to hear from you at <a href="mailto:jtraw96@gmail.com">jtraw96@gmail.com</a>. </span></p>
 										</div>
 									</div>
 			
-									<img style="width: 43%; height: 38%;     margin-left: 14px;" src="img/aboutme.jpg" alt="">
 						</div>
 
+						<img class="about-pic" style="margin-left: 14px;" src="img/aboutme.jpg" alt="">
 
 			
 					</div>
@@ -608,17 +620,17 @@
 			<div class="fade-in">
 				<div>
 					<h3>Skills</h3>
-					<p>I've learned many technologies in my career so far and plan to never stop learning more. 
+					<p>
 						Here are my top skills as a full stack developer: </p>
 				</div>
 
 
-				<div class="banner_inner d-flex align-items-center">
+				<div class="banner_inner d-flex align-items-center" style="flex-wrap: wrap; justify-content: space-around;">
 					<!-- Programming Languages-->
-					<div class="banner_content">
+					<div class="banner_content" style="    min-width: 212px;">
 						<div class="media">
 
-							<div class="tools_expert">
+							<div class="tools_expert" >
 								<h4 style="margin-bottom: 30px;">Programming Languages</h4>
 								<div class="skill_main">
 									<div class="skill_item">
@@ -677,7 +689,7 @@
 					</div>
 
 					<!-- Programming concepts-->
-					<div class="banner_content">
+					<div class="banner_content" style="    min-width: 212px;">
 						<div class="media">
 
 							<div class="tools_expert">
@@ -739,7 +751,7 @@
 					</div>
 
 					<!-- Web Technologies -->
-					<div class="banner_content">
+					<div class="banner_content" style="    min-width: 212px;">
 						<div class="media">
 
 							<div class="tools_expert">
@@ -816,9 +828,9 @@
 						<div class="flex-column">
 								<img style="max-width: 95%; margin-right: 4%" src="vietnamJourney.png" alt="">
 
-<div>
-	<p style="text-align: center; color: #777777">Google Maps of locations visited, starting in Hanoi</p>
-</div>
+									<div>
+										<p style="text-align: center; color: #777777">Google Maps of locations visited, starting in Hanoi</p>
+									</div>
 						</div>
 							
 						
@@ -1347,8 +1359,8 @@
 				<div>
 					<p>
 					
-							In 2017 I discovered <a target="_blank" href="https://en.wikipedia.org/wiki/1001_Books_You_Must_Read_Before_You_Die"> 1001 Books You Must Read Before You Die,</a>
-							and have read eighteen of these so far. Below are three of my favourites.
+							In 2017 I discovered this list of books: <a target="_blank" href="https://en.wikipedia.org/wiki/1001_Books_You_Must_Read_Before_You_Die"> 1001 Books You Must Read Before You Die.</a>
+							I have read eighteen of these so far, and below are three of my favourites.
 		
 			</p>
 					</div>

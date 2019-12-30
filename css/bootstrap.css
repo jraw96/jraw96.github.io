@@ -4242,7 +4242,8 @@ input[type=submit].btn-block {
     -ms-flex-positive: 1;
     flex-grow: 1;
     -ms-flex-align: center;
-    align-items: center
+    align-items: center;
+    background-color: white;
 }
 
 .navbar-toggler {
@@ -4389,6 +4390,7 @@ input[type=submit].btn-block {
         flex-wrap: nowrap
     }
     .navbar-expand-lg .navbar-collapse {
+        background-color: transparent !important;
         display: -ms-flexbox !important;
         display: flex !important;
         -ms-flex-preferred-size: auto;
@@ -4537,12 +4539,12 @@ input[type=submit].btn-block {
 }
 
 .navbar-dark .navbar-brand {
-    color: #fff
+    color: #777777
 }
 
 .navbar-dark .navbar-brand:focus,
 .navbar-dark .navbar-brand:hover {
-    color: #fff
+    color: #777777
 }
 
 .navbar-dark .navbar-nav .nav-link {
@@ -4562,7 +4564,7 @@ input[type=submit].btn-block {
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link.show,
 .navbar-dark .navbar-nav .show>.nav-link {
-    color: #fff
+    color: #777777
 }
 
 .navbar-dark .navbar-toggler {
@@ -4579,12 +4581,12 @@ input[type=submit].btn-block {
 }
 
 .navbar-dark .navbar-text a {
-    color: #fff
+    color: #777777
 }
 
 .navbar-dark .navbar-text a:focus,
 .navbar-dark .navbar-text a:hover {
-    color: #fff
+    color: #777777
 }
 
 .card {
