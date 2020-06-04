@@ -92,10 +92,13 @@
         cursor: pointer;
         margin-top: 27px;
         margin-bottom: 23px;
-    }
-	.header_area .navbar {
-		background: #000;
 	}
+	/*
+	.header_area .navbar {
+		background: white; 
+	}
+
+	*/
     .navbar-toggler[aria-expanded="false"] span:nth-child(2) {
 		opacity: 1;
 	}
@@ -116,7 +119,7 @@
 		display: block;
 		width: 25px;
 		height: 3px;
-		background: #fff;
+		background: #777777;
 		margin: auto;
 		margin-bottom: 4px;
 		transition: all 400ms linear;
@@ -149,7 +152,7 @@
         margin-left: 0px;
     }
 	.header_area .navbar-collapse{
-		max-height: 340px;
+		background-color: white;
 		overflow-y: scroll;
 	}
 	.header_area .navbar .nav .nav-item.submenu ul .nav-item .nav-link {
@@ -233,10 +236,10 @@
 		margin-bottom: 120px;
 	}
 	.home_banner_area .banner_inner {
-		min-height: 500px;
+	
 	}
 	.home_banner_area .box_1620 {
-		min-height: 500px;
+
 	}
 	.home_banner_area .banner_inner .banner_content {
 		margin-top: 0px;
@@ -316,7 +319,7 @@
 		min-height: 570px;
 	}
 	.home_banner_area .banner_inner {
-		min-height: 500px;
+	
 	}
 	.blog_banner .banner_inner .blog_b_text {
 		margin-top: 0px;
@@ -394,7 +397,9 @@
 	/* Main Menu Area css
 	============================================================================================ */
 	.header_area .navbar-collapse{
-		max-height: 250px;
+	
+
+		background-color: white;
 	}
 	/* End Main Menu Area css
 	============================================================================================ */
@@ -402,7 +407,7 @@
 	/* Home Banner Area css
 	============================================================================================ */
     .home_banner_area .banner_inner .banner_content {
-		padding: 30px 15px;
+	/*	padding: 30px 15px; */
 		margin-top: 0px;
 	}
 	.banner_content .white_btn {

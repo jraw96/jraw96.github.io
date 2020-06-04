@@ -60,7 +60,7 @@
   }
 
   .date-column{
-    max-width: 15%;
+    max-width: 20%;
   }
 
   .left {
@@ -98,6 +98,7 @@
     display: flex;
     flex-direction: column;
     flex-basis: 100%;
+    flex-wrap: wrap;
     flex: 1;
   }
 
@@ -320,3 +321,75 @@
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
 
+
+/* Custom collapsing view rendering*/
+
+
+/* Scales: 
+Biggest (desktop): 1200px
+Collapsed nav bar: 991px
+
+*/
+
+/* Home page pic */
+@media (min-width: 1200px) {
+  .home-pic {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 1199px){
+  .home-pic {
+    max-width: 100%;
+  }
+}
+
+/* About page pic */
+@media (min-width: 1200px) {
+  .about-pic {
+    width: 43%; height: 38%
+  }
+}
+
+@media (max-width: 1199px){
+  .about-pic {
+    width: 93%;
+    height: 38%;
+    margin-left: 14px;
+    margin-top: 18px;
+  }
+}
+
+
+
+
+
+@media (min-width: 992px) {
+  .nav-pipe {
+    display: show
+  }
+
+  .uncollapsed-travel {
+    display: show;
+  }
+
+  .collapsed-travel {
+    display: none;
+  }
+
+
+}
+
+@media (max-width: 991px) {
+  .nav-pipe {
+    display: none;
+  }
+
+  .uncollapsed-travel {
+    display: none;
+  }
+
+  .collapsed-travel {
+    display: show;
+  }
+}
